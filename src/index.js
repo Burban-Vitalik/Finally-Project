@@ -6,16 +6,20 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { Header } from './components/Header/Header';
 
-import './index.scss';
-
-
+import './index.css';
 class App extends React.Component{
-  
+  constructor(){
+    super();
+    
+  }
+
   render(){
     return(
         <div>
-        
+            <Header />
+
         </div>
     )
   }

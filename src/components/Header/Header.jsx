@@ -1,16 +1,14 @@
 import React from 'react';
 
-import s from '..Header/Header.module.scss'
+import s from '../Header/Header.module.css'
+import { TeamList } from './TeamList/TeamList';
 
 export class Header extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
+    
     render(){
         return(
-            <div>
-
+            <div className={s.header}>
+                <TeamList />
             </div>
         )
     }
