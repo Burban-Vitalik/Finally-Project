@@ -1,16 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  // Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import './index.css';
+
 
 class App extends React.Component{
   
   render(){
     return(
-      <div>
+        <div>
         
-      </div>
+        </div>
     )
   }
 }
 
-ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('root'));
+ReactDOM.render(<Router><App /></Router>,document.getElementById('root'));
