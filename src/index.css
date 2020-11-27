@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+/* My Fonts */
+@font-face{
+  font-family: 'JosefinSans-Bold700';
+  src: url('./Fonts/JosefinSans-Bold700.ttf');
+
+  font-family: 'JosefinSans-Medium500';
+  src: url('./Fonts/JosefinSans-Medium500.ttf');
+
+  font-family: 'JosefinSans-Light300';
+  src: url('./Fonts/JosefinSans-Light300.ttf');
+  
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
