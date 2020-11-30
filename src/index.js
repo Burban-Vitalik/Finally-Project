@@ -17,7 +17,7 @@ class App extends React.Component{
         <div>
             <Header />
             <div className='container'> 
-                <Home />
+                {/* <Home /> */}
                 {/* <Route path='' component={Home} /> */} {/*При кліку, тут буде відображено весь контент сайту цієї компоненти*/}
                 {/* <Route path='/Tables' component={Tables} /> */} {/*При кліку, тут буде відображено весь контент сайту цієї компоненти*/}
                 {/* <Route path='/...' component={..} /> */} {/*При кліку, тут буде відображено весь контент сайту цієї компоненти*/}

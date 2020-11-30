@@ -5,52 +5,55 @@ import s from '../Menu/Menu.module.css';
 import HomeIcon from '@material-ui/icons/Home';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import EventNoteIcon from '@material-ui/icons/EventNote';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
+import Button from '@material-ui/core/Button';
 
 export class Menu extends React.Component {
-    
+    constructor(props){
+        super(props);
+
+        this.state = {
+            mobileMenu: false,
+        };
+    }
+
+    toggleMobileMenu = () => {
+        this.setState({
+            mobileMenu: !this.state.mobileMenu
+        })
+    }
+
+    getNavigation = () => {
+        return (
+            <nav className={s.navigation}>
+                <NavLink to='/Home' activeClassName={s.active}><HomeIcon/>Home</NavLink>
+                <NavLink to='/Tables' activeClassName={s.active}><ListAltIcon />Table</NavLink>
+                <NavLink to='/Events' activeClassName={s.active}><EventNoteIcon />Events</NavLink>
+            </nav>
+        );
+    }
+
     render(){
         return(
-            <div className={s.menu}>
-                <div className={s.parentLogo}>
-                    <NavLink to="/Home">
+            <div className={s.headerMenu}>
+                <div className={s.menu}>
+                    <NavLink to="/Home" className={s.parentLogo}>
                         <img src='https://cdn.freelogovectors.net/wp-content/uploads/2020/08/epl-premierleague-logo.png' alt='Logo' className={s.logo}/>
-                    </NavLink>
-                    <NavLink to="/Home">
                         <p>Premier Legue</p>                    
                     </NavLink>
+
+                    {this.getNavigation()}
+                    
+                    <Button className={`${s.menuBtn} ${(this.state.mobileMenu) ? s.active : ""}`} variant="contained" onClick={this.toggleMobileMenu}>
+                        {(this.state.mobileMenu) ? <CloseIcon /> : <MenuIcon />}  
+                    </Button> 
                 </div>
-                <nav className={s.navigation}>
-                    <ul className={s.nav}>
-                        <li className={s.item}>
-                            <NavLink to='/Home' activeClassName={s.active}><HomeIcon color="disabled"/>Home</NavLink>
-                        </li>
-                        <li className={s.item}>
-                            <NavLink to='/Tables' activeClassName={s.active}><ListAltIcon />Table</NavLink>
-                        </li>
-                        <li className={s.item}>
-                            <NavLink to='/Events' activeClassName={s.active}><EventNoteIcon />Events</NavLink>
-                        </li>
-                    </ul>
-                    <ul className={s.socials}>
-                        <li className={s.socialItem}>
-                            <a href="https://www.youtube.com/premierleague" target="_blank" title="Click me"><YouTubeIcon className={s.youtubeIcon}/>PL on YouTube</a>
-                        </li>
-                        <li className={s.socialItem}>
-                            <a href="https://www.facebook.com/premierleague" target="_blank" title="Click me"><FacebookIcon className={s.facebookIcon}/>PL on Facebook</a>
-                        </li>
-                        <li className={s.socialItem}>
-                            <a href="https://twitter.com/premierleague" target="_blank" title="Click me"><TwitterIcon className={s.twitterIcon}/>PL on Twitter</a>
-                        </li>
-                        <li className={s.socialItem}>
-                            <a href="https://www.instagram.com/premierleague/" target="_blank" title="Click me"><InstagramIcon className={s.instagramIcon}/>PL on Instagram</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                
+                <div className={`${s.mobileMenu} ${(this.state.mobileMenu) ? s.show : ""}`}>
+                    {this.getNavigation()}
+                </div>
+            </div> 
         )
     }
 }
