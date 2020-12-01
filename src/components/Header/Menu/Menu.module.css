@@ -144,6 +144,6 @@ a.active {
     }
 
     .mobileMenu .navigation a.active {
-        background: coral;
+        background: #e90052;
     }
 }

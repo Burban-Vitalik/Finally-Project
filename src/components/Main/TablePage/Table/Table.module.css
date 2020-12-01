@@ -1,0 +1,45 @@
+.tableContainer {
+    width: 80% !important;
+    margin: 0 auto;
+    border: 1px solid red;
+    text-align: center;
+}
+
+.table {
+
+}
+
+.tableHead {
+    background: lightgray;
+}
+
+.tableRow {
+    border: 1px solid green;    
+}
+
+/* .tableRow th {
+    border: 1px solid green;
+} */
+
+.thPosition,
+.thPlayed,
+.thWon,
+.thDrawn,
+.thLost,
+.thGF,
+.thGA,
+.thGD,
+.thPoints {
+    width: 5%;
+    text-align: center;
+}
+
+.thClub,
+.thForm {
+    text-align: center !important;
+}
+
+.tableBody tr td {
+    border: 1px solid blue;
+    text-align: center !important;
+}
