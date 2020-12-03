@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import { getTeams } from '../../../api';
+// import getTeams from '../../../api';
 import s from '../TeamList/TeamList.module.css';
 
 export class TeamList extends React.Component{
@@ -15,7 +15,6 @@ export class TeamList extends React.Component{
     //         .then(
     //             (res) => {
     //                 this.setState({teamList: res.response})
-    //                 console.log('Team list', this.state);
     //             }
     //         )
     //         .catch(

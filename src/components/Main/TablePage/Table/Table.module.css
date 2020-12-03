@@ -1,25 +1,34 @@
+.header {
+    width: 100%;
+    background: #470741;
+    padding: 70px 0;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 54px;
+}
+
 .tableContainer {
     width: 80% !important;
     margin: 0 auto;
-    border: 1px solid red;
     text-align: center;
+    margin-top: 100px;
+    box-shadow: 1px 1px 15px 1px gray !important;
 }
 
 .table {
-
+    border-collapse: inherit !important;
 }
 
 .tableHead {
-    background: lightgray;
+    background: rgb(248, 243, 243);
 }
 
-.tableRow {
-    border: 1px solid green;    
+tbody th tr {
+    padding: 30px;
 }
-
-/* .tableRow th {
-    border: 1px solid green;
-} */
 
 .thPosition,
 .thPlayed,
@@ -29,17 +38,106 @@
 .thGF,
 .thGA,
 .thGD,
-.thPoints {
-    width: 5%;
-    text-align: center;
-}
-
-.thClub,
+.thPoints,
 .thForm {
+    width: 8%;
     text-align: center !important;
 }
 
-.tableBody tr td {
-    border: 1px solid blue;
-    text-align: center !important;
+.thClub {
+    display: flex !important;
+    align-items: center;
+    /* padding: 0; */
+    box-sizing: border-box !important;
 }
+
+
+
+
+.thClub img {
+    width: 25px;
+    display: flex;
+    align-items: stretch;
+    margin-right: 8px;
+    padding: 0;
+}
+
+.thPoints {
+    font-weight: 500 !important;
+}
+
+tbody tr:hover {
+    box-shadow: 2px 2px 12px 2px rgb(223, 221, 221);
+}
+
+/********** Media **********/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .thForm {
+        display: none !important;
+    }
+
+    .header h1 {
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .thForm,
+    .thGF,
+    .thGA,
+    .thLost {
+        display: none !important;
+    }
+
+    .thPosition {
+        width: 2%;
+    }
+
+    .header h1 {
+        font-size: 42px;
+    }
+ }
+
+ @media (min-width: 576px) and (max-width: 767.98px) { 
+    .header h1 {
+        font-size: 38px;
+    }
+
+    .thForm,
+    .thGF,
+    .thGA,
+    .thWon,
+    .thDrawn,
+    .thLost {
+        display: none !important;
+    }
+
+    .thPlayed,
+    .thGD
+    .thPoints {
+        width: 5%;
+    }
+ }
+
+ @media (max-width: 575.98px) { 
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .thForm,
+    .thGF,
+    .thGA,
+    .thGD,
+    .thWon,
+    .thDrawn,
+    .thLost,
+    .thPlayed {
+        display: none !important;
+    }
+
+    .thPoints {
+        width: 20%;
+    }
+
+  }
+
