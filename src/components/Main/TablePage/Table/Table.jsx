@@ -39,13 +39,11 @@ export default class DenseTable extends React.Component {
           // }
         ]
     }  
-    // console.log(this.state.tableTeamList);
     
     let teamList = getTable()
     .then(
         (res) => {
             this.setState({tableTeamList: res.response[0].league.standings[0]})
-            // console.log('Team list', this.state);
             this.state.tableTeamList.map((elem) => {
               this.setState({
                 rows:[
@@ -73,9 +71,7 @@ export default class DenseTable extends React.Component {
        (err) => {
          console.error('erffdddddddddr',err)
         }
-    );     
-
-        
+    );       
 }
   render(){
     return (

@@ -6,6 +6,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import MenuIcon from '@material-ui/icons/Menu';
+import SportsSoccerIcon from '@material-ui/icons/SportsSoccer';
 import CloseIcon from '@material-ui/icons/Close';
 import Button from '@material-ui/core/Button';
 
@@ -30,6 +31,7 @@ export class Menu extends React.Component {
                 <NavLink to='/home' activeClassName={s.active}><HomeIcon/>Home</NavLink>
                 <NavLink to='/table' activeClassName={s.active}><ListAltIcon />Table</NavLink>
                 <NavLink to='/events' activeClassName={s.active}><EventNoteIcon />Events</NavLink>
+                <NavLink to='/clubs' activeClassName={s.active}><SportsSoccerIcon />Clubs</NavLink>
             </nav>
         );
     }
