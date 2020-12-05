@@ -22,3 +22,5 @@
 [1202/171037.009:ERROR:exception_snapshot_win.cc(99)] thread ID 4804 not found in process
 [1202/171037.009:ERROR:exception_snapshot_win.cc(99)] thread ID 10864 not found in process
 [1203/175303.433:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1204/210107.798:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1205/110919.364:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)

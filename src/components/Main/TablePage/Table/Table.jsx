@@ -11,11 +11,11 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 
 import s from '../Table/Table.module.css';
-import getTable from '../../../../api'
+import {getTable} from '../../../../api';
 
-function createData(position, club, played, won, drawn, lost, gf, ga, gd, points, form) {
-  return { position, club, played, won, drawn, lost, gf, ga, gd, points, form };
-}
+// function createData(position, club, played, won, drawn, lost, gf, ga, gd, points, form) {
+//   return { position, club, played, won, drawn, lost, gf, ga, gd, points, form };
+// }
 
 export default class DenseTable extends React.Component {
   constructor(props){
@@ -40,11 +40,12 @@ export default class DenseTable extends React.Component {
         ]
     }  
     
-    let teamList = getTable()
+    getTable()
     .then(
         (res) => {
             this.setState({tableTeamList: res.response[0].league.standings[0]})
             this.state.tableTeamList.map((elem) => {
+              return(
               this.setState({
                 rows:[
                   ...this.state.rows,
@@ -64,6 +65,7 @@ export default class DenseTable extends React.Component {
                   }
                 ]
               })
+              )
             })
         }
     )

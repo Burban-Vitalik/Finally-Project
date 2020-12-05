@@ -1,7 +1,7 @@
 import React from 'react';
 
 import s from '../ClubList/ClubList.module.css';
-import getTeams from '../../../../api';
+import {getTeams} from '../../../../api';
 
 export class ClubList extends React.Component {
      constructor(props){
@@ -11,7 +11,7 @@ export class ClubList extends React.Component {
             teamList: []
         }
 
-        let teamList = getTeams()
+        getTeams()
             .then(
                 (res) => {
                     this.setState({teamList: res.response})
@@ -20,9 +20,7 @@ export class ClubList extends React.Component {
             .catch(
                (err) => console.error('err',err)
             );   
-            // console.log('constructor state list',this.state.teamList);    
     }
-
     render(){
         console.log('constructor state list',this.state.teamList);    
         return(
@@ -31,18 +29,23 @@ export class ClubList extends React.Component {
                     this.state.teamList.map((elem,index) => {
                         return(
                             <div className={s.boxCard} key={index}>
-                                <div className={s.cardTop}>
-                                    <img src={elem.venue.image} alt={elem.venue.name}/>
+                                <div className={s.stadium}>
+                                    <span className={s.stadiumImg} style={{backgroundImage: `url(${elem.venue.image})`}}></span>
                                 </div>
-
-                                <div className={s.logo}>
-                                    <img src={elem.team.logo} alt={elem.team.name}/>
+                                <div className={s.badge}>
+                                    <span className={s.badgeContainer}>
+                                        <img src={elem.team.logo} alt={elem.team.logo}/>
+                                    </span>
                                 </div>
-                                
-                                <div className={s.cardBottom}>
-                                    <p className={s.clubName}>{elem.team.name}</p>
+                                <div className={s.info}>
+                                    <div className={s.nameContainer}>
+                                        <h4 className={s.clubName}>{elem.team.name}</h4>
+                                        <p className={s.teamFounded}>Founded {elem.team.founded}</p>
+                                        <div className={s.stadiumName}>{elem.venue.name}</div>
+                                        <div className={s.stadiumCapacity}>Capacity {elem.venue.capacity}</div>
+                                    </div>
                                 </div>
-                             </div>
+                            </div>
                         )
                     })
                     }
