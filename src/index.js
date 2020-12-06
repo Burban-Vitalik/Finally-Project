@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 import { Header } from './components/Header/Header';
 import { ClubPage } from './components/Main/ClubPage/ClubPage';
+import { FixturePage } from './components/Main/FixturePage/FixturePage';
 import { HomePage } from './components/Main/HomePage/HomePage';
 import { TablePage } from './components/Main/TablePage/TablePage';
 
@@ -21,8 +22,8 @@ class App extends React.Component{
             <div className='container'> 
                 <Route path='/home' component={HomePage} /> 
                 <Route path='/table' component={TablePage} />
+                <Route path='/fixtures' component={FixturePage} />
                 <Route path='/clubs' component={ClubPage} />
-                {/* <Route path='/...' component={..} /> */} {/*При кліку, тут буде відображено весь контент сайту цієї компоненти*/}
             </div>
         </div>
     )

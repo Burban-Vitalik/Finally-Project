@@ -1,0 +1,92 @@
+.fixtureMatch {
+    display: block;
+    border: 1px solid lightgray;
+    padding: 5px;
+    margin: 20px 0;
+}
+
+.fixtureMatch:hover {
+    /* background: #e90052; */
+    background-image: linear-gradient(to right, #7a1896, #9a1aa4, #bb1bb0, #dd1bbb, #ff1cc4);
+    color: white;
+    transition: 0.1s;
+}
+
+.overview {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+}
+
+.minutes {
+    /* border: 1px solid red; */
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 50px;
+    width: 100%;
+    align-items: center;
+    /* color: blue; */
+    font-size: 14px;
+}
+
+/* Teams */
+.teams {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    width: 40%;
+}
+
+.team {
+    /* border: 1px solid green; */
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.teamName{
+    font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-weight: 400;
+}
+
+.badgeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.badgeContainer img{
+    width: 20px;
+    margin: 0 5px;
+}
+
+.matchTime {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+}
+
+/* Stadium */
+
+.stadiumName {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+
+}
+
+.stadiumIcon {
+    background-image: url(../../../../../Img/stadiumIcon.png);
+    background-position: center;
+    background-size: cover;
+    max-width: 20px;
+    max-height: 20px;
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+}

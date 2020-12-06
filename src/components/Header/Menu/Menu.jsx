@@ -30,7 +30,7 @@ export class Menu extends React.Component {
             <nav className={s.navigation}>
                 <NavLink to='/home' activeClassName={s.active}><HomeIcon/>Home</NavLink>
                 <NavLink to='/table' activeClassName={s.active}><ListAltIcon />Table</NavLink>
-                <NavLink to='/events' activeClassName={s.active}><EventNoteIcon />Events</NavLink>
+                <NavLink to='/fixtures' activeClassName={s.active}><EventNoteIcon />Fixtures</NavLink>
                 <NavLink to='/clubs' activeClassName={s.active}><SportsSoccerIcon />Clubs</NavLink>
             </nav>
         );
