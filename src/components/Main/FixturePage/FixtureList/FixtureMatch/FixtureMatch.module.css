@@ -27,6 +27,18 @@
     width: 100%;
     align-items: center;
     font-size: 14px;
+    color: black;
+}
+
+.pLive {
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cameraIcon {
+    margin-right: 5px;
 }
 
 /* Teams */
@@ -82,6 +94,21 @@
     outline: 1px solid lightgray;
 }
 
+.tablo {
+    border: 1px solid lightgray;
+    position: absolute;
+    display: flex;
+}
+
+.homeGoals {
+    border-right: 1px solid lightgray;
+    padding: 0 5px;
+}
+
+.awayGoals {
+    padding: 0 5px;
+}
+
 /* Stadium */
 
 .stadiumName {
@@ -107,7 +134,8 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     .minutes {
-        max-width: 30px;
+        max-width: 50px;
+        font-size: 12px;
     }
 
     .teams {
@@ -124,6 +152,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
+    .minutes {
+        font-size: 12px;
+    }
+
     .teams {
         width: 90%;
     }
@@ -147,8 +179,9 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .minutes {
-        max-width: 20px;
+        max-width: 50px;
         width: 100%;
+        font-size: 12px;
     }
 
     .teams {
@@ -175,8 +208,9 @@
 
  @media (max-width: 575.98px) {
     .minutes {
-        max-width: 20px;
+        max-width: 50px;
         width: 100%;
+        font-size: 10px;
     }
      
     .teams {

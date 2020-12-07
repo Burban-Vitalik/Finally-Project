@@ -10,7 +10,12 @@ export class FixturePage extends React.Component{
         console.log('State',this.state);
         return(
             <div className={s.fixturePage}>
-                <FixtureList />
+                <div className={s.header}>
+                    <h1>Fixtures</h1>
+                </div>
+                <div className={s.container}>
+                    <FixtureList />
+                </div>
             </div>
         )
     }

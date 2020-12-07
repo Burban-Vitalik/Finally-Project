@@ -29,7 +29,7 @@ export class FixtureList extends React.Component{
         }   
              
     render(){
-        // console.log('State',this.state);
+        console.log('State',this.state);
         return(
             <div className={s.fixturePage}>
                 <div className={s.fixturesList}>

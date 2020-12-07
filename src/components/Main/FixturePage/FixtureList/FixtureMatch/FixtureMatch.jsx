@@ -2,8 +2,7 @@ import React from 'react';
 
 import s from '../FixtureMatch/FixtureMatch.module.css';
 import {getFutureFixtures} from '../../../../../api';
-const stadiumIcon = require('../../../../../Img/stadiumIcon.png');
-
+import LiveTvIcon from '@material-ui/icons/LiveTv';
 
 
 export class FixtureMatch extends React.Component{
@@ -27,7 +26,12 @@ export class FixtureMatch extends React.Component{
                 <div className={s.overview}>
                     {/* Minutes */}
                     <div className={s.minutes}>
-                    <p>{this.props.match.fixture.status.elapsed}</p>
+                    {(this.props.match.fixture.status.short === "NS") ? (
+                        ""
+                    ) : (
+                        <p className={s.pLive}><LiveTvIcon fontSize='small' className={s.cameraIcon}/>{this.props.match.fixture.status.elapsed}</p>
+                    )
+                        }
                     </div>
                     {/* Teams */}
                     <div className={s.teams}>
@@ -39,7 +43,14 @@ export class FixtureMatch extends React.Component{
                                 <img src={this.props.match.teams.home.logo}/>
                             </div>
                         </div>
-                        <time className={s.matchTime} dateTime='2020-12-06-20:35'>{this.getTimestamp(this.props.match.fixture.timestamp)}</time>
+                        {(this.props.match.fixture.status.short === "NS") ? (
+                            <time className={s.matchTime} dateTime={this.getTimestamp(this.props.match.fixture.timestamp)}>{this.getTimestamp(this.props.match.fixture.timestamp)}</time>
+                        ): (
+                            <div className={s.tablo}>
+                                <div className={s.homeGoals}>{this.props.match.goals.home}</div>
+                                <div className={s.awayGoals}>{this.props.match.goals.away}</div>
+                            </div>
+                        )}
                         <div className={`${s.team} ${s.teamAway}`}>
                             <div className={s.badgeContainer}>
                             <img src={this.props.match.teams.away.logo}/>
