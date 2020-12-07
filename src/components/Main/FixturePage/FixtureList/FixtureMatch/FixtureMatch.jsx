@@ -31,7 +31,7 @@ export class FixtureMatch extends React.Component{
                     </div>
                     {/* Teams */}
                     <div className={s.teams}>
-                        <div className={s.team}>
+                        <div className={`${s.team} ${s.teamHome}`}>
                             <div className={s.teamName}>
                                 <p>{this.props.match.teams.home.name}</p>
                             </div>
@@ -40,7 +40,7 @@ export class FixtureMatch extends React.Component{
                             </div>
                         </div>
                         <time className={s.matchTime} dateTime='2020-12-06-20:35'>{this.getTimestamp(this.props.match.fixture.timestamp)}</time>
-                        <div className={s.team}>
+                        <div className={`${s.team} ${s.teamAway}`}>
                             <div className={s.badgeContainer}>
                             <img src={this.props.match.teams.away.logo}/>
                             </div>

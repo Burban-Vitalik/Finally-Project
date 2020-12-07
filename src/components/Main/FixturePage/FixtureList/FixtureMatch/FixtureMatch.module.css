@@ -1,7 +1,6 @@
 .fixtureMatch {
     display: block;
     border: 1px solid lightgray;
-    padding: 5px;
     margin: 20px 0;
 }
 
@@ -15,6 +14,7 @@
 .overview {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
     /* border: 1px solid blue; */
 }
 
@@ -33,16 +33,23 @@
 /* Teams */
 .teams {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     /* border: 1px solid black; */
-    width: 40%;
+    width: 45%;
 }
 
 .team {
-    /* border: 1px solid green; */
-    margin: 0 10px;
     display: flex;
-    align-items: center;
+    max-width: 35%;
+    width: 100%;
+}
+
+.teamHome {
+    justify-content: flex-end;
+}
+
+.teamAway {
+    justify-content: flex-start;
 }
 
 .teamName{
@@ -64,9 +71,8 @@
 
 .matchTime {
     padding: 0 10px;
-    display: flex;
-    align-items: center;
-    border: 1px solid lightgray;
+    position: absolute;
+    outline: 1px solid lightgray;
 }
 
 /* Stadium */
