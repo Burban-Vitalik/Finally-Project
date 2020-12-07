@@ -9,7 +9,7 @@ const stadiumIcon = require('../../../../../Img/stadiumIcon.png');
 export class FixtureMatch extends React.Component{
      constructor(props){
          super(props);
-         console.log('Props', this.props);
+        //  console.log('Props', this.props);
      }
 
      getTimestamp = (timestamp) => {

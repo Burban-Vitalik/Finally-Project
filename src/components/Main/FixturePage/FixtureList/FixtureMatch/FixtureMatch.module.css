@@ -1,11 +1,11 @@
 .fixtureMatch {
     display: block;
     border: 1px solid lightgray;
-    margin: 20px 0;
+    margin: 25px 0;
+    cursor: pointer;
 }
 
 .fixtureMatch:hover {
-    /* background: #e90052; */
     background-image: linear-gradient(to right, #7a1896, #9a1aa4, #bb1bb0, #dd1bbb, #ff1cc4);
     color: white;
     transition: 0.1s;
@@ -13,8 +13,8 @@
 
 .overview {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
+    /* justify-content: space-between; */
+    padding: 10px 0;
     /* border: 1px solid blue; */
 }
 
@@ -26,35 +26,42 @@
     max-width: 50px;
     width: 100%;
     align-items: center;
-    /* color: blue; */
     font-size: 14px;
 }
 
 /* Teams */
 .teams {
     display: flex;
+    align-items: center;
     justify-content: space-around;
     /* border: 1px solid black; */
-    width: 45%;
+    width: 50%;
 }
 
 .team {
     display: flex;
-    max-width: 35%;
+    max-width: 40%;
     width: 100%;
+    /* border: 1px solid violet; */
 }
 
 .teamHome {
     justify-content: flex-end;
+    margin-right: 15px;
 }
 
 .teamAway {
     justify-content: flex-start;
+    margin-left: 15px;
 }
 
 .teamName{
     font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif;
     font-weight: 400;
+}
+
+.teamName p {
+    width: 100%;
 }
 
 .badgeContainer {
@@ -82,7 +89,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 12px;
+    font-size: 14px;
+    /* border: 1px solid red; */
 
 }
 
@@ -96,3 +104,104 @@
     height: 100%;
     margin-right: 10px;
 }
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .minutes {
+        max-width: 30px;
+    }
+
+    .teams {
+        font-size: 14px;
+    }
+    
+    .teamAway {
+        margin-left: 15px;
+    }
+
+    .stadiumName {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .teams {
+        width: 90%;
+    }
+
+    .team {
+        width: 100%;
+    }
+
+    .teamHome {
+        justify-content: flex-end;
+    }
+
+    .teamAway {
+        justify-content: flex-start;
+    }
+
+    .stadiumName {
+        display: none;
+    }   
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .minutes {
+        max-width: 20px;
+        width: 100%;
+    }
+
+    .teams {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .team {
+        width: 100%;
+    }
+
+    .teamHome {
+        justify-content: flex-end;
+    }
+
+    .teamAway {
+        justify-content: flex-start;
+    }
+
+    .stadiumName {
+        display: none;
+    }  
+ }
+
+ @media (max-width: 575.98px) {
+    .minutes {
+        max-width: 20px;
+        width: 100%;
+    }
+     
+    .teams {
+        width: 90%;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .team {
+        width: 100%;
+        align-items: center;
+    }
+
+    .teamHome {
+        justify-content: flex-end;
+    }
+
+    .teamAway {
+        justify-content: flex-start;
+    }
+
+    .stadiumName {
+        display: none;
+    }  
+ }
+
+
