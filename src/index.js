@@ -10,6 +10,7 @@ import { TablePage } from './components/Main/TablePage/TablePage';
 import { ResultPage } from './components/Main/ResultPage/ResultPage';
 
 import './index.css';
+import { NewsPage } from './components/Main/NewsPage/NewsPage';
 class App extends React.Component{
   constructor(){
     super();
@@ -22,10 +23,11 @@ class App extends React.Component{
             <Header />
             <div className='container'> 
                 <Route path='/home' component={HomePage} /> 
-                {/* <Route path='/table' component={TablePage} /> */}
+                <Route path='/table' component={TablePage} />
                 <Route path='/fixtures' component={FixturePage} />
                 <Route path='/results' component={ResultPage} />
-                {/* <Route path='/clubs' component={ClubPage} /> */}
+                <Route path='/clubs' component={ClubPage} />
+                <Route path='/news' component={NewsPage} />
             </div>
         </div>
     )

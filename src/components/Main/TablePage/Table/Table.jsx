@@ -1,5 +1,4 @@
 import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -13,31 +12,13 @@ import Tooltip from '@material-ui/core/Tooltip';
 import s from '../Table/Table.module.css';
 import {getTable} from '../../../../api';
 
-// function createData(position, club, played, won, drawn, lost, gf, ga, gd, points, form) {
-//   return { position, club, played, won, drawn, lost, gf, ga, gd, points, form };
-// }
-
 export default class DenseTable extends React.Component {
   constructor(props){
     super(props);
 
     this.state = {
         tableTeamList: [],
-        rows: [
-          // {
-          //   position: 1,
-          //   club: 'Man City',
-          //   played: 20,
-          //   won: 15,
-          //   drawn: 3,
-          //   lost: 2,
-          //   gf: 18,
-          //   ga: 10,
-          //   gd: 8,
-          //   points: 48,
-          //   form: "LLWWN"
-          // }
-        ]
+        rows: []
     }  
     
     getTable()

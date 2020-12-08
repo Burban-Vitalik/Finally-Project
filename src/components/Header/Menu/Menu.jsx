@@ -33,6 +33,7 @@ export class Menu extends React.Component {
                 <NavLink to='/fixtures' activeClassName={s.active}><EventNoteIcon />Fixtures</NavLink>
                 <NavLink to='/results' activeClassName={s.active}><EventNoteIcon />Results</NavLink>
                 <NavLink to='/clubs' activeClassName={s.active}><SportsSoccerIcon />Clubs</NavLink>
+                <NavLink to='/news' activeClassName={s.active}><SportsSoccerIcon />News</NavLink>
             </nav>
         );
     }

@@ -9,7 +9,6 @@ export class TablePage extends React.Component{
         return(
             <div className={s.tablePage}>
                 <Table />
-
             </div>
         )
     }

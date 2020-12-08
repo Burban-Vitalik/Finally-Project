@@ -1,0 +1,20 @@
+.newsPage {
+    margin: 0 auto;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    background: #18002d;
+    padding: 70px 0;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 54px;
+}
