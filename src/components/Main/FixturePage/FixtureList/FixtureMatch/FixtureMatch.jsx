@@ -8,7 +8,7 @@ import LiveTvIcon from '@material-ui/icons/LiveTv';
 export class FixtureMatch extends React.Component{
      constructor(props){
          super(props);
-        //  console.log('Props', this.props);
+         console.log('Props', this.props);
      }
 
      getTimestamp = (timestamp) => {
@@ -26,7 +26,7 @@ export class FixtureMatch extends React.Component{
                 <div className={s.overview}>
                     {/* Minutes */}
                     <div className={s.minutes}>
-                    {(this.props.match.fixture.status.short === "NS") ? (
+                    {(this.props.match.fixture.status.short === "NS" || this.props.match.fixture.status.short === "FT" || this.props.match.fixture.status.short === "PST") ? (
                         ""
                     ) : (
                         <p className={s.pLive}><LiveTvIcon fontSize='small' className={s.cameraIcon}/>{this.props.match.fixture.status.elapsed}</p>

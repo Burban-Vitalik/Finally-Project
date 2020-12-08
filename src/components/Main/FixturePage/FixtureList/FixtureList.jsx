@@ -12,12 +12,9 @@ export class FixtureList extends React.Component{
             fixturesList: []
         }
 
-        let date = new Date();
-
-        let today = `${date.getFullYear()}-${date.getMonth()+1}-0${date.getDate()}`;
-        let toData = `${date.getFullYear()}-${date.getMonth()+2}-0${date.getDate()}`;
-
-        getFutureFixtures(today, toData)
+        let fromDate = this.props.fromDate;
+        let toDate = this.props.toDate;
+        getFutureFixtures(fromDate, toDate)
             .then(
                 (res) => {
                     this.setState({fixturesList: res.response})
@@ -26,10 +23,11 @@ export class FixtureList extends React.Component{
             .catch(
                (err) => console.error('err',err)
             );   
-        }   
-             
+
+            console.log('Props', this.state);
+
+        }                
     render(){
-        console.log('State',this.state);
         return(
             <div className={s.fixturePage}>
                 <div className={s.fixturesList}>

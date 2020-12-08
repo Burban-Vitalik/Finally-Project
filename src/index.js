@@ -7,6 +7,7 @@ import { ClubPage } from './components/Main/ClubPage/ClubPage';
 import { FixturePage } from './components/Main/FixturePage/FixturePage';
 import { HomePage } from './components/Main/HomePage/HomePage';
 import { TablePage } from './components/Main/TablePage/TablePage';
+import { ResultPage } from './components/Main/ResultPage/ResultPage';
 
 import './index.css';
 class App extends React.Component{
@@ -23,6 +24,7 @@ class App extends React.Component{
                 <Route path='/home' component={HomePage} /> 
                 {/* <Route path='/table' component={TablePage} /> */}
                 <Route path='/fixtures' component={FixturePage} />
+                <Route path='/results' component={ResultPage} />
                 {/* <Route path='/clubs' component={ClubPage} /> */}
             </div>
         </div>

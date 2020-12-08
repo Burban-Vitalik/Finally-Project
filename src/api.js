@@ -44,8 +44,8 @@ export const getTable = async () => {
             Fixtures Api
  ******************************************/
 
-export const getFutureFixtures = async (todayData, toData) => {
-    let body = await fetch(`https://api-football-beta.p.rapidapi.com/fixtures?to=${toData}&league=39&season=2020&from=${todayData}`, {
+export const getFutureFixtures = async (fromDate, toDate) => {
+    let body = await fetch(`https://api-football-beta.p.rapidapi.com/fixtures?to=${toDate}&league=39&season=2020&from=${fromDate}`, {
         "method": "GET",
         "headers": headers,
     })
