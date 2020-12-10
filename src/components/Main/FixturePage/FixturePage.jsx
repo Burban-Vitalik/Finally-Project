@@ -10,8 +10,8 @@ export class FixturePage extends React.Component{
         super();
 
         this.state={
-            fromDate: `${new Date().getFullYear()}-${new Date().getMonth()+1}-0${new Date().getDate()}`,
-            toDate: `${new Date().getFullYear()}-${new Date().getMonth()+2}-0${new Date().getDate()}`,
+            fromDate: `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}`,
+            toDate: `${new Date().getFullYear()}-${new Date().getMonth()+2}-${new Date().getDate()}`,
         }
     }          
     render(){
