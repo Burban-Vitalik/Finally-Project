@@ -4,7 +4,6 @@
     margin: 20px;
     box-sizing: border-box;
     cursor: pointer;
-    /* border: 1px solid red; */
 }
 
 .img img {
@@ -15,7 +14,6 @@
 }
 
 .title {
-    /* border: 1px solid green; */
     font-family: PremierSans-Regular,Arial,Helvetica Neue,Helvetica,sans-serif;
     display: flex;
     font-weight: 600;
@@ -24,27 +22,98 @@
 }
 
 .img img:hover {
-    /* object-fit: contain; */
     object-fit: cover;
-
     transition: 1s;
 }
 
-/* .title:hover {
-
-} */
-
 .description {
-    /* border: 1px solid black; */
     font-size: 14px;
     color: gray;
     margin-top: 5px;
 }
 
 .published {
-    /* border: 1px solid cyan; */
-    font-size: 10px;
+    font-size: 12px;
     display: flex;
     justify-content: space-between;    
-    margin-top: 5px;
+    margin-top: 10px;
+    font-weight: 600;
 }
+
+
+@media (min-width: 1200px) and (max-width: 1499px) {
+    .news {
+        max-width: 28%;
+    }
+
+    .img img {
+        height: 210px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+     .news {
+         max-width: 28%;
+     }
+
+     .img img {
+        height: 180px;
+        object-fit: cover;
+     }
+
+     .title {
+         font-size: 18px;
+     }
+
+     .description {
+         font-size: 12px;
+     }
+
+     .published {
+         font-size: 10px;
+         font-weight: 600;
+         margin-top: 10px;
+     }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+      .news {
+          max-width: 43%;
+      }
+
+      .img img {
+          height: 200px;
+          object-fit: cover;
+      }
+
+      .title {
+          font-size: 16px;
+      }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .news {
+        max-width: 100%;
+    }
+
+    .img img {
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        height: auto;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .news {
+        max-width: 100%;
+    }
+
+    .img img {
+        object-fit: cover;
+        height: auto;
+    }
+ }
+
+

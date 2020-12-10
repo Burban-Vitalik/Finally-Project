@@ -2,4 +2,23 @@
     font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif;
     max-width: 80%;
     width: 100%;
+    margin-bottom: 500px;
+    border: 1px solid green;
+}
+
+.newsSection {
+    /* border: 1px solid red; */
+}
+
+.listNews {
+    max-height: 720px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.buttonMoreNews {
+    padding: 5px;
+    background-color: slateblue;
 }

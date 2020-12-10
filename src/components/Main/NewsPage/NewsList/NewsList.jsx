@@ -24,13 +24,12 @@ export class NewsList extends React.Component{
             );  
         }    
     render(){
-        // console.log('News List', this.state); 
         return(
             <div className={s.newsPage}>
                 <div className={s.newsList}>
                     {this.state.newsList.map((elem, index) => {
                         return(
-                            <News news={elem} key={index}/>
+                            <News news={elem} key={index} maxWidth={this.props.maxWidth} height={this.props.height}/>
                         )
                     })}
                 </div>

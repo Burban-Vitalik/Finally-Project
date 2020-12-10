@@ -15,15 +15,18 @@ export class News extends React.Component {
         let year = fullDate.getFullYear();
         let month = fullDate.getMonth()+1;
         let date = fullDate.getDate();
-        
-        return year + ':' + month + ':' + date;        
+        if(date < 10) {
+           return year + ':' + month + ':' + "0"+date;
+        } else {
+            return year + ':' + month + ':' + date;
+        }
      }
     
     render(){
         return(
-            <article className={s.news}>
+            <article className={s.news} style={{maxWidth: `${this.props.maxWidth}`}}>
                 <div className={s.img}>
-                    <img src={this.props.news.img}  alt="Photo"/>
+                    <img src={this.props.news.img} alt="Photo" style={{height: `${this.props.height}`}}/>
                 </div>
                 <div className={s.title}>
                     <p>{this.props.news.tit}</p>
