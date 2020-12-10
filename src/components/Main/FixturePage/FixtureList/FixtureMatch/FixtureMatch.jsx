@@ -1,7 +1,7 @@
 import React from 'react';
 
 import s from '../FixtureMatch/FixtureMatch.module.css';
-import {getFutureFixtures} from '../../../../../api';
+// import {getFutureFixtures} from '../../../../../api';
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 
 
