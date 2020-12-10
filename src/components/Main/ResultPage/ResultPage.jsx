@@ -8,10 +8,11 @@ export class ResultPage extends React.Component{
         super();
 
         this.state={
-            fromDate: `${new Date().getFullYear()}-${new Date().getMonth()}-0${new Date().getDate()}`,
-            toDate: `${new Date().getFullYear()}-${new Date().getMonth()+1}-0${new Date().getDate()}`,
+            fromDate: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDate()}`,
+            toDate: `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}`,
         }
     }          
+    
     render(){
         console.log('State',this.state);
         return(

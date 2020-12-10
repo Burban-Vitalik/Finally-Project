@@ -19,7 +19,6 @@ export class FixtureMatch extends React.Component{
         
         return hours + ':' + minutes.substr(-2);        
      }
-
     render(){
         return(
             <div className={s.fixtureMatch}>

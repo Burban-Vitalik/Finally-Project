@@ -25,7 +25,6 @@ export class FixtureList extends React.Component{
             );   
 
             console.log('Props', this.state);
-
         }                
     render(){
         return(

@@ -20,7 +20,7 @@ export default class DenseTable extends React.Component {
         tableTeamList: [],
         rows: []
     }  
-    
+
     getTable()
     .then(
         (res) => {
@@ -59,9 +59,6 @@ export default class DenseTable extends React.Component {
   render(){
     return (
       <div>
-        <div className={s.header}>
-          <h1>Tables</h1>
-        </div>
         <TableContainer component={Paper} className={s.tableContainer}>
         <Table className={s.table} size="small" aria-label="a dense table">
           <TableHead className={s.tableHead}>
