@@ -24,8 +24,13 @@ export class FixtureList extends React.Component{
                (err) => console.error('err',err)
             );   
 
-            console.log('Props', this.state);
-        }                
+            let fixtureArr = this.state.fixturesList;
+
+            // console.log('Props', this.state);
+            
+            console.log('Arr', fixtureArr);
+        } 
+                       
     render(){
         return(
             <div className={s.fixturePage}>

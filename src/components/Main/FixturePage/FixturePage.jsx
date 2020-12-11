@@ -15,7 +15,6 @@ export class FixturePage extends React.Component{
         }
     }          
     render(){
-        console.log('State',this.state);
         return(
             <div className={s.fixturePage}>
                 <div className={s.header}>

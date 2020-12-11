@@ -30,6 +30,11 @@
     color: black;
 }
 
+.fixtureMatchDate P {
+    font-weight: 700;
+    color: darkslategray;
+}
+
 .pLive {
     color: red;
     display: flex;
