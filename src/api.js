@@ -26,8 +26,8 @@ export const getTeams = async () => {
                 Table API 
  ******************************************/
 
-export const getTable = async (season) => {
-    let body = await fetch(`https://api-football-beta.p.rapidapi.com/standings?season=${season}&league=39`, {
+export const getTable = async () => {
+    let body = await fetch("https://api-football-beta.p.rapidapi.com/standings?season=2020&league=39", {
         "method": "GET",
         "headers": headers
     })

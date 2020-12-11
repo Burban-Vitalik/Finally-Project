@@ -10,6 +10,9 @@
 .header {
     width: 100%;
     background: #18002d;
+    object-fit: cover;
+    background-size: cover;
+
     padding: 70px 0;
     text-align: center;
     color: white;

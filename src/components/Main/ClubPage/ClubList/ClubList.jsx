@@ -48,7 +48,7 @@ export class ClubList extends React.Component {
                             </div>
                         )
                     })
-                    }
+                }
             </div>
         )
     }

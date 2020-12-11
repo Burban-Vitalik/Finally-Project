@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SportsSoccerIcon from '@material-ui/icons/SportsSoccer';
 import CloseIcon from '@material-ui/icons/Close';
 import Button from '@material-ui/core/Button';
+import PublicIcon from '@material-ui/icons/Public';
 
 export class Menu extends React.Component {
     constructor(props){
@@ -33,7 +34,7 @@ export class Menu extends React.Component {
                 <NavLink to='/fixtures' activeClassName={s.active}><EventNoteIcon />Fixtures</NavLink>
                 <NavLink to='/results' activeClassName={s.active}><EventNoteIcon />Results</NavLink>
                 <NavLink to='/clubs' activeClassName={s.active}><SportsSoccerIcon />Clubs</NavLink>
-                <NavLink to='/news' activeClassName={s.active}><SportsSoccerIcon />News</NavLink>
+                <NavLink to='/news' activeClassName={s.active}><PublicIcon />News</NavLink>
             </nav>
         );
     }

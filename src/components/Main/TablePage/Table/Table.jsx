@@ -21,7 +21,7 @@ export default class DenseTable extends React.Component {
         rows: []
     }  
 
-    getTable()
+    getTable(`${this.props.season}`)
     .then(
         (res) => {
             this.setState({tableTeamList: res.response[0].league.standings[0]})
