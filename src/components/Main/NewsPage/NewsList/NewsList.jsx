@@ -26,7 +26,7 @@ export class NewsList extends React.Component{
     render(){
         return(
             <div className={s.newsPage}>
-                <div className={s.newsList}>
+                <div className={s.newsList} style={{justifyContent: `${this.props.content}`}}>
                     {this.state.newsList.map((elem, index) => {
                         return(
                             <News news={elem} key={index} maxWidth={this.props.maxWidth} height={this.props.height}/>

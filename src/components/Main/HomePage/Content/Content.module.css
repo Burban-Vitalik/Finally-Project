@@ -3,19 +3,30 @@
     max-width: 80%;
     width: 100%;
     margin-bottom: 500px;
-    border: 1px solid green;
+}
+
+.h2 {
+    color: #000;
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
 }
 
 .newsSection {
-    /* border: 1px solid red; */
+    margin-top: 30px;
 }
 
-.listNews {
-    max-height: 720px;
-    overflow: hidden;
+.listNews div {
     display: flex;
-    justify-content: space-between;
-    border: 1px solid red;
+}
+
+.listNews article {
+    max-width: 28%;
+    width: 100%;
+}
+
+.listNews article img {
+    max-height: 180px;
 }
 
 .buttonMoreNews {

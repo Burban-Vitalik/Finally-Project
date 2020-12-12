@@ -17,18 +17,15 @@ export class FixtureList extends React.Component{
         getFutureFixtures(fromDate, toDate)
             .then(
                 (res) => {
-                    this.setState({fixturesList: res.response})
+                    
+                    let sortedList = res.response.sort((a,b) => new Date(a.fixture.date) - new Date(b.fixture.date));
+                    this.setState({fixturesList: sortedList});
+                    console.log(this.state);
                 }
             )
             .catch(
                (err) => console.error('err',err)
             );   
-
-            let fixtureArr = this.state.fixturesList;
-
-            // console.log('Props', this.state);
-            
-            console.log('Arr', fixtureArr);
         } 
                        
     render(){

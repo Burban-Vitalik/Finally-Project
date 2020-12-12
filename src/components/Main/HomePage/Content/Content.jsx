@@ -8,13 +8,10 @@ export class Content extends React.Component {
         return(
             <div className={s.content}>
                 <section className={s.newsSection}>
-                    <h2>Latest News</h2>
+                    <h2 className={s.h2}>Latest News</h2>
                     <div className={s.listNews}>
-                        <NewsList maxWidth="25%" height="150px"/>
-                    </div>
-                    <button className={s.buttonMoreNews}>
-                        More News    
-                    </button>    
+                        <NewsList />
+                    </div> 
                 </section>
             </div>
         )

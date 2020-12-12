@@ -60,47 +60,47 @@ export default class DenseTable extends React.Component {
     return (
       <div>
         <TableContainer component={Paper} className={s.tableContainer}>
-          <Table className={s.table} size="small" aria-label="a dense table">
-            <TableHead className={s.tableHead}>
-              <TableRow className={s.tableRow}>
-                <TableCell className={s.thPosition}>Position</TableCell>
-                <TableCell className={s.thClub}>Club</TableCell>
-                <TableCell className={s.thPlayed}>Played</TableCell>
-                <TableCell className={s.thWon}>Won</TableCell>
-                <TableCell className={s.thDrawn}>Drawn</TableCell>
-                <TableCell className={s.thLost}>Lost</TableCell>
-                <Tooltip title="Goals for" placement="top-start">
-                  <TableCell className={s.thGF}>GF</TableCell>
-                </Tooltip>
-                <Tooltip title="Goals against" placement="top-start">
-                  <TableCell className={s.thGA}>GA</TableCell>
-                </Tooltip>
-                <Tooltip title="Goals difference" placement="top-start">
-                  <TableCell className={s.thGD}>GD</TableCell>
-                </Tooltip>
-                <TableCell className={s.thPoints}>Points</TableCell>
-                <TableCell className={s.thForm}>Form</TableCell>
+        <Table className={s.table} size="small" aria-label="a dense table">
+          <TableHead className={s.tableHead}>
+            <TableRow className={s.tableRow}>
+              <TableCell className={s.thPosition}>Position</TableCell>
+              <TableCell className={s.thClub}>Club</TableCell>
+              <TableCell className={s.thPlayed}>Played</TableCell>
+              <TableCell className={s.thWon}>Won</TableCell>
+              <TableCell className={s.thDrawn}>Drawn</TableCell>
+              <TableCell className={s.thLost}>Lost</TableCell>
+              <Tooltip title="Goals for" placement="top-start">
+                <TableCell className={s.thGF}>GF</TableCell>
+              </Tooltip>
+              <Tooltip title="Goals against" placement="top-start">
+                <TableCell className={s.thGA}>GA</TableCell>
+              </Tooltip>
+              <Tooltip title="Goals difference" placement="top-start">
+                <TableCell className={s.thGD}>GD</TableCell>
+              </Tooltip>
+              <TableCell className={s.thPoints}>Points</TableCell>
+              <TableCell className={s.thForm}>Form</TableCell>
+            </TableRow>
+          </TableHead>
+  
+          <TableBody className={s.tableBody}>
+            {this.state.rows.map((row, index) => (
+              <TableRow key={index}>
+                <TableCell component="th" scope="row" className={s.thPosition}> {row.position}</TableCell>
+                <TableCell className={s.thClub}> <img src={row.club.logo} alt={row.club.name}/> {row.club.name}</TableCell>
+                <TableCell className={s.thPlayed}> {row.played}</TableCell>
+                <TableCell className={s.thWon}> {row.won}</TableCell>
+                <TableCell className={s.thDrawn}> {row.drawn}</TableCell>
+                <TableCell className={s.thLost}> {row.lost}</TableCell>
+                <TableCell className={s.thGF}> {row.gf}</TableCell>
+                <TableCell className={s.thGA}> {row.ga}</TableCell>
+                <TableCell className={s.thGD}> {row.gd}</TableCell>
+                <TableCell className={s.thPoints}> {row.points}</TableCell>
+                <TableCell className={s.thForm}> {row.form}</TableCell>
               </TableRow>
-            </TableHead>
-    
-            <TableBody className={s.tableBody}>
-              {this.state.rows.map((row, index) => (
-                <TableRow key={index}>
-                  <TableCell component="th" scope="row" className={s.thPosition}> {row.position}</TableCell>
-                  <TableCell className={s.thClub}> <img src={row.club.logo} alt={row.club.name}/> {row.club.name}</TableCell>
-                  <TableCell className={s.thPlayed}> {row.played}</TableCell>
-                  <TableCell className={s.thWon}> {row.won}</TableCell>
-                  <TableCell className={s.thDrawn}> {row.drawn}</TableCell>
-                  <TableCell className={s.thLost}> {row.lost}</TableCell>
-                  <TableCell className={s.thGF}> {row.gf}</TableCell>
-                  <TableCell className={s.thGA}> {row.ga}</TableCell>
-                  <TableCell className={s.thGD}> {row.gd}</TableCell>
-                  <TableCell className={s.thPoints}> {row.points}</TableCell>
-                  <TableCell className={s.thForm}> {row.form}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+            ))}
+          </TableBody>
+        </Table>
       </TableContainer>
       </div>
     );

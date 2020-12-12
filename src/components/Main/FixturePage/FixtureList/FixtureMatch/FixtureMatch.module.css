@@ -13,33 +13,38 @@
 
 .overview {
     display: flex;
-    /* justify-content: space-between; */
     padding: 10px 0;
-    /* border: 1px solid blue; */
 }
 
 .minutes {
-    /* border: 1px solid red; */
     display: inline-flex;
-    justify-content: center;
     text-align: center;
-    max-width: 100px;
+    max-width: 120px;
     width: 100%;
     align-items: center;
     font-size: 14px;
     color: black;
+    padding-left: 5px;
+}
+
+.shortDate {
+    display: none;
+}
+
+.shortestDate {
+    display: none;
 }
 
 .fixtureMatchDate P {
     font-weight: 700;
-    color: darkslategray;
+    color: darkslategrey;
 }
 
 .pLive {
     color: red;
     display: flex;
-    justify-content: center;
     align-items: center;
+    font-size: 14px;
 }
 
 .cameraIcon {
@@ -51,7 +56,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* border: 1px solid black; */
     width: 50%;
 }
 
@@ -103,6 +107,8 @@
     border: 1px solid lightgray;
     position: absolute;
     display: flex;
+    background: #fd4d8b;
+    color: white;
 }
 
 .homeGoals {
@@ -139,8 +145,16 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     .minutes {
-        max-width: 50px;
+        max-width: 100px;
         font-size: 12px;
+    }
+
+    .shortDate {
+        display: none;
+    }
+    
+    .shortestDate {
+        display: none;
     }
 
     .teams {
@@ -159,14 +173,33 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
     .minutes {
         font-size: 12px;
+        max-width: 15%;
+    }
+
+    .shortDate {
+        display: none;
+    }
+    
+    .shortestDate {
+        display: none;
+    }
+
+    .pLive {
+        margin-left: 20px;
     }
 
     .teams {
-        width: 90%;
+        width: 85%;  
+        font-size: 18px;
     }
 
     .team {
         width: 100%;
+    }
+
+    .badgeContainer img{
+        width: 25px;
+        margin: 0 8px;
     }
 
     .teamHome {
@@ -184,9 +217,21 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .minutes {
-        max-width: 50px;
+        max-width: 80px;
         width: 100%;
         font-size: 12px;
+    }
+
+    .fullDate {
+        display: none;
+    }
+
+    .shortDate {
+        display: block;
+    }
+    
+    .shortestDate {
+        display: none;
     }
 
     .teams {
@@ -213,13 +258,30 @@
 
  @media (max-width: 575.98px) {
     .minutes {
-        max-width: 50px;
+        max-width: 17%;
         width: 100%;
         font-size: 10px;
     }
      
+    .fullDate {
+        display: none;
+    }
+
+    .shortDate {
+        display: none;
+    }
+
+    .shortestDate {
+        display: flex;
+        font-size: 12px;
+    }
+
+    .pLive {
+        font-size: 12px;
+    }
+
     .teams {
-        width: 90%;
+        width: 83%;
         font-size: 12px;
         display: flex;
         align-items: center;
