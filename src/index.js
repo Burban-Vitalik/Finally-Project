@@ -11,6 +11,7 @@ import { ResultPage } from './components/Main/ResultPage/ResultPage';
 
 import './index.css';
 import { NewsPage } from './components/Main/NewsPage/NewsPage';
+import { Footer } from './components/Footer/Footer';
 class App extends React.Component{
   constructor(){
     super();
@@ -29,6 +30,7 @@ class App extends React.Component{
                 <Route path='/clubs' component={ClubPage} />
                 <Route path='/news' component={NewsPage} />
             </div>
+            <Footer />
         </div>
     )
   }

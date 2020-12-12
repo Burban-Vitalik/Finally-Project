@@ -1,0 +1,50 @@
+.navigation {
+    width: 30%;
+}
+
+.listSocials {
+    max-height: 170px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.listSocials a{
+    font-size: 12px;
+}
+
+.youtubeIcon,
+.facebookIcon,
+.instagramIcon,
+.twitterIcon,
+.spotifyIcon {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.youtubeIcon {
+    color: red;
+}
+
+.facebookIcon {
+    color: blue;
+}
+
+.twitterIcon {
+    color: dodgerblue;
+}
+
+.instagramIcon {
+    color: #F56040;
+}
+
+.spotifyIcon {
+    color: rgb(49, 165, 49);
+}
