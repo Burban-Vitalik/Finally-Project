@@ -8,7 +8,8 @@ export class FooterMenu extends React.Component {
     render(){
         return(
             <div className={s.footerMenu}>
-                <div className={s.logo}></div>
+                {/* <div className={s.logo}></div> */}
+                <h1>Premie League</h1>
                 <nav className={s.navigation}>
                     <NavLink to='/home' activeClassName={s.active}>Home</NavLink>
                     <NavLink to='/table' activeClassName={s.active}>Table</NavLink>

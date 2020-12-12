@@ -1,5 +1,5 @@
 .navigation {
-    width: 30%;
+    width: 50%;
 }
 
 .listSocials {
@@ -48,3 +48,29 @@ h2 {
 .spotifyIcon {
     color: rgb(49, 165, 49);
 }
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navigation {
+        width: 60%;
+    }
+ }
+
+ @media (min-width: 768px) and (max-width: 991.98px) {
+    .navigation {
+        width: 60%;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .navigation {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        display: flex;
+        justify-content: start;
+    }
+   }

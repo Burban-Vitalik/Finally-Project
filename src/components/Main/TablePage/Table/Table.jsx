@@ -54,7 +54,7 @@ export default class DenseTable extends React.Component {
        (err) => {
          console.error('erffdddddddddr',err)
         }
-    );       
+    );
 }
   render(){
     return (
@@ -85,7 +85,7 @@ export default class DenseTable extends React.Component {
   
           <TableBody className={s.tableBody}>
             {this.state.rows.map((row, index) => (
-              <TableRow key={index}>
+              <TableRow key={index} >
                 <TableCell component="th" scope="row" className={s.thPosition}> {row.position}</TableCell>
                 <TableCell className={s.thClub}> <img src={row.club.logo} alt={row.club.name}/> {row.club.name}</TableCell>
                 <TableCell className={s.thPlayed}> {row.played}</TableCell>
@@ -96,7 +96,7 @@ export default class DenseTable extends React.Component {
                 <TableCell className={s.thGA}> {row.ga}</TableCell>
                 <TableCell className={s.thGD}> {row.gd}</TableCell>
                 <TableCell className={s.thPoints}> {row.points}</TableCell>
-                <TableCell className={s.thForm}> {row.form}</TableCell>
+            <TableCell className={s.thForm}>{row.form}</TableCell>
               </TableRow>
             ))}
           </TableBody>

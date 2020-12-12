@@ -2,7 +2,6 @@
     width: 80% !important;
     margin: 0 auto;
     text-align: center;
-    margin-top: 100px;
     box-shadow: 1px 1px 15px 1px gray !important;
 }
 
@@ -56,6 +55,11 @@ tbody th tr {
 
 tbody tr:hover {
     box-shadow: 2px 2px 12px 2px rgb(223, 221, 221);
+}
+
+
+.lch {
+    background: coral;
 }
 
 /********** Media **********/

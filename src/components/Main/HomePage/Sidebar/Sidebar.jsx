@@ -1,4 +1,5 @@
 import React from 'react';
+import DenseTable from '../../TablePage/Table/Table';
 
 import s from '../Sidebar/Sidebar.module.css';
 

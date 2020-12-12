@@ -9,8 +9,8 @@ export class Footer extends React.Component {
         return(
             <footer className={s.footer}>
                 <div className={s.container}>
-                    <Socials />
                     <FooterMenu />
+                    <Socials />
                 </div>
             </footer>
         )
