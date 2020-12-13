@@ -21,6 +21,7 @@ export class NewsList extends React.Component{
                         newsList: res.arts,
                         showSpiner: false,
                     })
+                    console.log('Response',res);
                 }
             )
             .catch(

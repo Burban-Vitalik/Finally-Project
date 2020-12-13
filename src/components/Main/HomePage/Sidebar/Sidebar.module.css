@@ -1,7 +1,8 @@
 .sidebar {
-    background: coral;
+    /* background: coral; */
     width: 25%;
     text-align: center;
+    padding-top: 50px;
 }
 
 

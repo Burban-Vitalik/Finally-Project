@@ -24,15 +24,12 @@ class App extends React.Component{
         <div className={s.app}>
             <Header className={s.header}/>
             <div className={s.container}> 
-            
-                <Switch>
-                  <Route exact path='/' component={HomePage} /> 
-                  <Route path='/table' component={TablePage} />
-                  <Route path='/fixtures' component={FixturePage} />
-                  <Route path='/results' component={ResultPage} />
-                  <Route path='/clubs' component={ClubPage} />
-                  <Route path='/news' component={NewsPage} />
-              </Switch>
+                <Route exact path='/' component={HomePage} /> 
+                <Route path='/table' component={TablePage} />
+                <Route path='/fixtures' component={FixturePage} />
+                <Route path='/results' component={ResultPage} />
+                <Route path='/clubs' component={ClubPage} />
+                <Route path='/news' component={NewsPage} />
             </div>
             <Footer className={s.footer}/>
         </div>

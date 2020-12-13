@@ -7,7 +7,6 @@ export default class Sidebar extends React.Component {
     render(){
         return(
             <aside className={s.sidebar}>
-                Sidebar
                 <Table tableSmall={true}/>
             </aside>
         )

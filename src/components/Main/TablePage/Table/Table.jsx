@@ -69,11 +69,11 @@ export default class DenseTable extends React.Component {
         {(this.state.showSpiner) ? (<Spiner />) : ("")}
         <TableContainer component={Paper} className={s.tableContainer}>
         <Table className={s.table} size="small" aria-label="a dense table">
-          <TableHead className={s.tableHead}>
+          <TableHead className={(this.props.tableSmall) ? (s.tableHeadSmall) : (s.tableHead)}>
             <TableRow className={s.tableRow}>
-              <TableCell className={s.thPosition}>Pos</TableCell>
-              <TableCell className={s.thClub}>Club</TableCell>
-              <TableCell className={s.thPlayed}>Played</TableCell>
+            {(this.props.tableSmall) ? (<TableCell className={`${s.thPositionSmall}`}>Pos</TableCell>) : (<TableCell className={s.thPosition}>Position</TableCell>)}
+              {(this.props.tableSmall) ? (<TableCell className={s.thClubSmall}>Club</TableCell>) : (<TableCell className={s.thClub}>Club</TableCell>)}
+              {(this.props.tableSmall) ? (<TableCell className={s.thPlayedSmall}>Pl</TableCell>) : (<TableCell className={s.thPlayed}>Played</TableCell>)}
               {(this.props.tableSmall) ? ("") : (<TableCell className={s.thWon}>Won</TableCell>)}
               {(this.props.tableSmall) ? ("") : (<TableCell className={s.thDrawn}>Drawn</TableCell>)}
               {(this.props.tableSmall) ? ("") : (<TableCell className={s.thLost}>Lost</TableCell>)}
@@ -92,24 +92,23 @@ export default class DenseTable extends React.Component {
                   <TableCell className={s.thGD}>GD</TableCell>
                 </Tooltip>
               )}
-              <TableCell className={s.thPoints}>Points</TableCell>
+              {(this.props.tableSmall) ? (<TableCell className={`${s.thPointsSmall}`}>Pts</TableCell>) : (<TableCell className={s.thPlayed}>Played</TableCell>)}
               {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>Form</TableCell>)}
             </TableRow>
           </TableHead>
-  
           <TableBody className={s.tableBody}>
             {this.state.rows.map((row, index) => (
               <TableRow key={index} >
-                <TableCell component="th" scope="row" className={s.thPosition}> {row.position}</TableCell>
-                <TableCell className={s.thClub}> <img src={row.club.logo} alt={row.club.name}/> {row.club.name}</TableCell>
-                <TableCell className={s.thPlayed}> {row.played}</TableCell>
+                {(this.props.tableSmall) ? (<TableCell component="th" scope="row" className={`${s.thPositionSmall}`}> {row.position}</TableCell>) : (<TableCell component="th" scope="row" className={`${s.thPosition}`}> {row.position}</TableCell>)}
+                {(this.props.tableSmall) ? (<TableCell className={s.thClubSmall}> <img src={row.club.logo} alt={row.club.name}/> {row.club.name}</TableCell>) : (<TableCell className={s.thClub}> <img src={row.club.logo} alt={row.club.name}/> {row.club.name}</TableCell>)}
+                {(this.props.tableSmall) ? (<TableCell className={`${s.thPlayedSmall}`}> {row.played}</TableCell>) : (<TableCell className={s.thPlayed}> {row.played}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thWon}> {row.won}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thDrawn}> {row.drawn}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thLost}> {row.lost}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGF}> {row.gf}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGA}> {row.ga}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGD}> {row.gd}</TableCell>)}
-                <TableCell className={s.thPoints}> {row.points}</TableCell>
+                {(this.props.tableSmall) ? (<TableCell className={`${s.thPointsSmall}`}> {row.points}</TableCell>) : (<TableCell className={s.thPoints}> {row.points}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>{row.form}</TableCell>)}
               </TableRow>
             ))}

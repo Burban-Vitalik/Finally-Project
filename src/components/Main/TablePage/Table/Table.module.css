@@ -10,7 +10,11 @@
 }
 
 .tableHead {
-    background: rgb(248, 243, 243);
+    background: rgb(238, 234, 234);
+}
+
+.tableHeadSmall{
+    background: rgb(226, 109, 255);
 }
 
 tbody th tr {
@@ -34,12 +38,9 @@ tbody th tr {
 .thClub {
     display: flex !important;
     align-items: center;
-    /* padding: 0; */
     box-sizing: border-box !important;
+    font-size: 14px;
 }
-
-
-
 
 .thClub img {
     width: 25px;
@@ -52,6 +53,30 @@ tbody th tr {
 .thPoints {
     font-weight: 500 !important;
 }
+
+
+/* For Small Table */
+.thPositionSmall,
+.thPointsSmall,
+.thPlayedSmall {
+    /* border: 1px solid red;   */
+    padding: 5px !important;
+    text-align: center !important;
+    font-size: 12px;
+}
+
+.thClubSmall {
+    font-size: 12px;
+    padding: 7px 0 !important;
+    display: flex;
+    align-items: center !important;
+}
+
+.thClubSmall img {
+    width: 20px;
+    margin-right: 3px;
+}
+
 
 tbody tr:hover {
     box-shadow: 2px 2px 12px 2px rgb(223, 221, 221);
