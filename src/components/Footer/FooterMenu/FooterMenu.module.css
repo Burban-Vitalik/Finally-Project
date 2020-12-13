@@ -71,3 +71,19 @@ a.active {
         font-size: 26px;
     }
   }
+
+  @media (max-width: 575.98px) {
+    .footerMenu {
+        width: 100%;
+        height: auto;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+   }
+

@@ -8,8 +8,8 @@ export class Content extends React.Component {
         return(
             <div className={s.content}>
                 <section className={s.newsSection}>
-                    <h2 className={s.h2}>Latest News</h2>
                     <div className={s.listNews}>
+                        <h2 className={s.h2}>Latest News</h2>
                         <NewsList />
                     </div> 
                 </section>
