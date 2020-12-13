@@ -1,3 +1,12 @@
+.clubPage {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+    border: 3px solid green;
+    min-height: 100vh;
+}
+
 .header {
     width: 100%;
     background: #18002d;

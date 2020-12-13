@@ -2,29 +2,40 @@ import React from 'react';
 
 import s from '../ClubList/ClubList.module.css';
 import {getTeams} from '../../../../api';
+import Spiner from '../../../General/Spiner/Spiner';
+
 
 export class ClubList extends React.Component {
      constructor(props){
         super(props);
 
         this.state = {
-            teamList: []
+            teamList: [],
+            showSpiner: true
         }
 
         getTeams()
             .then(
                 (res) => {
-                    this.setState({teamList: res.response})
+                    this.setState({
+                        teamList: res.response,
+                        showSpiner: false,
+                    })
+                    
                 }
             )
             .catch(
-               (err) => console.error('err',err)
+                (err) => {
+                    console.error('err',err)
+                    this.setState({showSpiner: false});
+               } 
             );   
     }
     render(){
         console.log('constructor state list',this.state.teamList);    
         return(
             <div className={s.clubList}>
+                {(this.state.showSpiner) ? (<Spiner />) : ("")}
                 {
                     this.state.teamList.map((elem,index) => {
                         return(

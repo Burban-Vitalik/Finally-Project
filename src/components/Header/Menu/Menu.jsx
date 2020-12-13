@@ -29,7 +29,7 @@ export class Menu extends React.Component {
     getNavigation = () => {
         return (
             <nav className={s.navigation}>
-                <NavLink to='/home' activeClassName={s.active}><HomeIcon/>Home</NavLink>
+                <NavLink exact to='/' activeClassName={s.active}><HomeIcon/>Home</NavLink>
                 <NavLink to='/table' activeClassName={s.active}><ListAltIcon />Table</NavLink>
                 <NavLink to='/fixtures' activeClassName={s.active}><EventNoteIcon />Fixtures</NavLink>
                 <NavLink to='/results' activeClassName={s.active}><EventNoteIcon />Results</NavLink>
@@ -43,7 +43,7 @@ export class Menu extends React.Component {
         return(
             <div className={s.headerMenu}>
                 <div className={s.menu}>
-                    <NavLink to="/home" className={s.parentLogo}>
+                    <NavLink to="/" className={s.parentLogo}>
                         <img src='https://cdn.freelogovectors.net/wp-content/uploads/2020/08/epl-premierleague-logo.png' alt='Logo' className={s.logo}/>
                         <p>Premier Legue</p>                    
                     </NavLink>

@@ -11,6 +11,8 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 import s from '../Table/Table.module.css';
 import {getTable} from '../../../../api';
+import Spiner from '../../../General/Spiner/Spiner';
+
 
 export default class DenseTable extends React.Component {
   constructor(props){
@@ -18,8 +20,11 @@ export default class DenseTable extends React.Component {
 
     this.state = {
         tableTeamList: [],
-        rows: []
+        rows: [],
+        showSpiner: true,
     }  
+
+    console.log('TableSmall', this.props);
 
     getTable(`${this.props.season}`)
     .then(
@@ -44,42 +49,51 @@ export default class DenseTable extends React.Component {
                     form: elem.form,
 
                   }
-                ]
+                ],
+                showSpiner: false,
               })
               )
             })
         }
     )
     .catch(
-       (err) => {
-         console.error('erffdddddddddr',err)
-        }
+      (err) => {
+        console.error('err',err)
+        this.setState({showSpiner: false});
+   }   
     );
 }
   render(){
     return (
       <div>
+        {(this.state.showSpiner) ? (<Spiner />) : ("")}
         <TableContainer component={Paper} className={s.tableContainer}>
         <Table className={s.table} size="small" aria-label="a dense table">
           <TableHead className={s.tableHead}>
             <TableRow className={s.tableRow}>
-              <TableCell className={s.thPosition}>Position</TableCell>
+              <TableCell className={s.thPosition}>Pos</TableCell>
               <TableCell className={s.thClub}>Club</TableCell>
               <TableCell className={s.thPlayed}>Played</TableCell>
-              <TableCell className={s.thWon}>Won</TableCell>
-              <TableCell className={s.thDrawn}>Drawn</TableCell>
-              <TableCell className={s.thLost}>Lost</TableCell>
-              <Tooltip title="Goals for" placement="top-start">
-                <TableCell className={s.thGF}>GF</TableCell>
-              </Tooltip>
-              <Tooltip title="Goals against" placement="top-start">
-                <TableCell className={s.thGA}>GA</TableCell>
-              </Tooltip>
-              <Tooltip title="Goals difference" placement="top-start">
-                <TableCell className={s.thGD}>GD</TableCell>
-              </Tooltip>
+              {(this.props.tableSmall) ? ("") : (<TableCell className={s.thWon}>Won</TableCell>)}
+              {(this.props.tableSmall) ? ("") : (<TableCell className={s.thDrawn}>Drawn</TableCell>)}
+              {(this.props.tableSmall) ? ("") : (<TableCell className={s.thLost}>Lost</TableCell>)}
+              {(this.props.tableSmall) ? ("") : (
+                <Tooltip title="Goals for" placement="top-start">
+                  <TableCell className={s.thGF}>GF</TableCell>
+                </Tooltip>
+              )}
+              {(this.props.tableSmall) ? ("") : (
+                <Tooltip title="Goals against" placement="top-start">
+                  <TableCell className={s.thGA}>GA</TableCell>
+                </Tooltip>
+              )}
+              {(this.props.tableSmall) ? ("") : (
+                <Tooltip title="Goals difference" placement="top-start">
+                  <TableCell className={s.thGD}>GD</TableCell>
+                </Tooltip>
+              )}
               <TableCell className={s.thPoints}>Points</TableCell>
-              <TableCell className={s.thForm}>Form</TableCell>
+              {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>Form</TableCell>)}
             </TableRow>
           </TableHead>
   
@@ -89,14 +103,14 @@ export default class DenseTable extends React.Component {
                 <TableCell component="th" scope="row" className={s.thPosition}> {row.position}</TableCell>
                 <TableCell className={s.thClub}> <img src={row.club.logo} alt={row.club.name}/> {row.club.name}</TableCell>
                 <TableCell className={s.thPlayed}> {row.played}</TableCell>
-                <TableCell className={s.thWon}> {row.won}</TableCell>
-                <TableCell className={s.thDrawn}> {row.drawn}</TableCell>
-                <TableCell className={s.thLost}> {row.lost}</TableCell>
-                <TableCell className={s.thGF}> {row.gf}</TableCell>
-                <TableCell className={s.thGA}> {row.ga}</TableCell>
-                <TableCell className={s.thGD}> {row.gd}</TableCell>
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thWon}> {row.won}</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thDrawn}> {row.drawn}</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thLost}> {row.lost}</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGF}> {row.gf}</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGA}> {row.ga}</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGD}> {row.gd}</TableCell>)}
                 <TableCell className={s.thPoints}> {row.points}</TableCell>
-            <TableCell className={s.thForm}>{row.form}</TableCell>
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>{row.form}</TableCell>)}
               </TableRow>
             ))}
           </TableBody>

@@ -1,5 +1,5 @@
 import React from 'react';
-import DenseTable from '../../TablePage/Table/Table';
+import Table from '../../TablePage/Table/Table';
 
 import s from '../Sidebar/Sidebar.module.css';
 
@@ -8,6 +8,7 @@ export default class Sidebar extends React.Component {
         return(
             <aside className={s.sidebar}>
                 Sidebar
+                <Table tableSmall={true}/>
             </aside>
         )
     }
