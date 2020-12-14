@@ -34,7 +34,8 @@ export class ClubList extends React.Component {
     render(){
         console.log('constructor state list',this.state.teamList);    
         return(
-            <div className={s.clubList}>
+            <a href="https://www.premierleague.com/clubs" target="_blanc">
+                <div className={s.clubList}>
                 {(this.state.showSpiner) ? (<Spiner />) : ("")}
                 {
                     this.state.teamList.map((elem,index) => {
@@ -61,6 +62,7 @@ export class ClubList extends React.Component {
                     })
                 }
             </div>
+            </a>
         )
     }
 }
