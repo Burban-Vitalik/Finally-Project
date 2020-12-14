@@ -24,8 +24,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.1rem;
-  min-height: 100vh;
-
+  padding: 0 !important;
 }
 
 code {
@@ -48,4 +47,5 @@ code {
 
 .container {
   flex: 1;
+  min-height: 100vh;
 }
