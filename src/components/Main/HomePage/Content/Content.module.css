@@ -2,6 +2,11 @@
     font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif;
     max-width: 70%;
     width: 100%;
+    margin-top: 50px;
+}
+
+.matchToday img {
+    width: 20px;
 }
 
 .h2 {
@@ -11,27 +16,25 @@
     margin-left: 20px;
 }
 
-.newsSection {
-    margin-top: 30px;
-}
-
-.listNews div {
+.newsSection .listNews {
     display: flex;
     justify-content: center;
 }
 
+
+.listNews  {
+    display: flex;
+    justify-content: space-between;
+}
+
 .listNews article {
-    max-width: 26%;
+    max-width: 27%;
     width: 100%;
+
 }
 
 .listNews article img {
-    max-height: 160px;
-}
-
-.buttonMoreNews {
-    padding: 5px;
-    background-color: slateblue;
+    max-height: 180px;
 }
 
 

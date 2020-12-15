@@ -21,7 +21,7 @@ export class FixturePage extends React.Component{
                     <h1>Fixtures</h1>
                 </div>
                 <div className={s.container}>
-                    <FixtureList fromDate={this.state.fromDate} toDate={this.state.toDate} fixture={true}/>
+                    <FixtureList fromDate={this.state.fromDate} toDate={this.state.toDate} fixture={true} fixtureSmall={false}/>
                 </div>
             </div>
         )

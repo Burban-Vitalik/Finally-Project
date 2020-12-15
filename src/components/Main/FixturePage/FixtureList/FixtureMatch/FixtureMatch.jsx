@@ -42,24 +42,28 @@ export class FixtureMatch extends React.Component{
             <div className={s.fixtureMatch}>
                 <div className={s.overview}>
                     {/* Minutes */}
-                    <div className={s.minutes}>
+                    <div className={(this.props.fixtureSmall) ? (s.minutesSmall) : (s.minutes)}>
                         {(this.props.match.fixture.status.short === "NS" || this.props.match.fixture.status.short === "FT" || this.props.match.fixture.status.short === "PST") ? (
                             (this.props.match.fixture.status.short === "FT") ? (
                                 <p>Finished</p>
+                            ) : (
+                            (this.props.fixtureSmall) ? (
+                                ""
                             ) : (
                             <div className={s.fixtureMatchDate}>
                                 <p className={s.fullDate}>{this.getDateFixture(this.props.match.fixture.date)}</p>
                                 <p className={s.shortDate}>{this.getShortDateFixture(this.props.match.fixture.date)}</p>
                                 <p className={s.shortestDate}>{this.getShotestDate(this.props.match.fixture.date)}</p>
                             </div>
+                            )
                                 )
                             ) : (
                             <p className={s.pLive}><LiveTvIcon fontSize='small' className={s.cameraIcon}/>Live {this.props.match.fixture.status.elapsed}</p>
                             )
-                            }
+                        }
                     </div>
                     {/* Teams */}
-                    <div className={s.teams}>
+                    <div className={(this.props.fixtureSmall) ? (s.teamsSmall) : (s.teams) }>
                         <div className={`${s.team} ${s.teamHome}`}>
                             <div className={s.teamName}>
                                 <p>{this.props.match.teams.home.name}</p>
@@ -86,7 +90,7 @@ export class FixtureMatch extends React.Component{
                         </div>
                     </div>
                     {/* Stadium */}
-                    <div className={s.stadiumName}>
+                    <div className={(this.props.fixtureSmall) ? (s.stadiumNameSmall) : (s.stadiumName)}>
                         <div className={s.stadiumIcon}>
                             
                         </div>

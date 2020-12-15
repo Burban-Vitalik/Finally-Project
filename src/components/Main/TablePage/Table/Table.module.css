@@ -14,7 +14,7 @@
 }
 
 .tableHeadSmall{
-    background: rgb(226, 109, 255);
+    background: rgb(250, 129, 240);
 }
 
 tbody th tr {
@@ -33,6 +33,10 @@ tbody th tr {
 .thForm {
     width: 8%;
     text-align: center !important;
+}
+
+.thForm {
+    display: flex !important;
 }
 
 .thClub {
@@ -70,6 +74,10 @@ tbody th tr {
     padding: 7px 0 !important;
     display: flex;
     align-items: center !important;
+}
+
+.lch {
+    background: #000;
 }
 
 .thClubSmall img {

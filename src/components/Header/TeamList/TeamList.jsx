@@ -11,15 +11,15 @@ export class TeamList extends React.Component{
             teamList: []
         }
 
-        getTeams()
-            .then(
-                (res) => {
-                    this.setState({teamList: res.response})
-                }
-            )
-            .catch(
-               (err) => console.error('err',err)
-            );       
+        // getTeams()
+        //     .then(
+        //         (res) => {
+        //             this.setState({teamList: res.response})
+        //         }
+        //     )
+        //     .catch(
+        //        (err) => console.error('err',err)
+        //     );       
     }
 
     render(){

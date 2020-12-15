@@ -3,13 +3,14 @@
  ******************************************/
 // 4a100ac091mshe4f0605e78c96b3p14dbc4jsn9c24614dd0dc
 // 8a20c36012msh5404bbe3b367d4dp1acd59jsnc5feb1741c3b
+// c0a8f9ebd4msh8d6eafbe24f0fcdp1df1e4jsn046eebcd6a03
 
 
 /******************************************
                 List of Clubs
  ******************************************/
 const headers = {
-    "x-rapidapi-key": '8a20c36012msh5404bbe3b367d4dp1acd59jsnc5feb1741c3b',
+    "x-rapidapi-key": 'c0a8f9ebd4msh8d6eafbe24f0fcdp1df1e4jsn046eebcd6a03',
     "x-rapidapi-host": "api-football-beta.p.rapidapi.com"
 }
 
@@ -54,7 +55,7 @@ export const getFutureFixtures = async (fromDate, toDate) => {
  ******************************************/
 
 let headers2 = {
-    "x-rapidapi-key": "4a100ac091mshe4f0605e78c96b3p14dbc4jsn9c24614dd0dc",
+    "x-rapidapi-key": "c0a8f9ebd4msh8d6eafbe24f0fcdp1df1e4jsn046eebcd6a03",
     "x-rapidapi-host": "livescore6.p.rapidapi.com"
 }
 

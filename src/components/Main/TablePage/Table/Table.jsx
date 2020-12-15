@@ -12,6 +12,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import s from '../Table/Table.module.css';
 import {getTable} from '../../../../api';
 import Spiner from '../../../General/Spiner/Spiner';
+import {TeamForm} from '../../../General/TeamForm/TeamForm';
 
 
 export default class DenseTable extends React.Component {
@@ -62,7 +63,19 @@ export default class DenseTable extends React.Component {
         this.setState({showSpiner: false});
    }   
     );
-}
+    // this.getSplitTeamForm('LLWDL');
+  }
+
+  getSplitTeamForm =  (teamForm) => {
+    if(typeof teamForm !== 'string'){
+      return [];
+    }
+    console.log('Team Form',teamForm);
+    let splited = teamForm.split('');
+    console.log('Splited',splited);
+    return (splited && splited.length) ? splited : [];
+  } 
+
   render(){
     return (
       <div>
@@ -109,7 +122,11 @@ export default class DenseTable extends React.Component {
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGA}> {row.ga}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGD}> {row.gd}</TableCell>)}
                 {(this.props.tableSmall) ? (<TableCell className={`${s.thPointsSmall}`}> {row.points}</TableCell>) : (<TableCell className={s.thPoints}> {row.points}</TableCell>)}
-                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>{row.form}</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>
+                {this.getSplitTeamForm(row.form).map((item,index)=> {
+                  return <TeamForm key={index} teamForm={item}/>
+                })}
+                </TableCell>)}
               </TableRow>
             ))}
           </TableBody>

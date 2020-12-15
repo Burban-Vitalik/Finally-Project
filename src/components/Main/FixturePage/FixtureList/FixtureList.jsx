@@ -13,7 +13,6 @@ export class FixtureList extends React.Component{
         this.state = {
             fixturesList: [],
             showSpiner: true,
-
         }
 
         let fromDate = this.props.fromDate;
@@ -45,7 +44,7 @@ export class FixtureList extends React.Component{
                 <div className={s.fixturesList}>
                     {this.state.fixturesList.map((elem, index) => {
                         return(
-                            <FixtureMatch match={elem} key={index}/>
+                            <FixtureMatch match={elem} key={index} fixtureSmall={this.props.fixtureSmall}/>
                         )
                     })}
                 </div>

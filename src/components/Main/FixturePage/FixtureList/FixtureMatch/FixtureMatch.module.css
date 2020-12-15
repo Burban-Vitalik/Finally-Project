@@ -27,6 +27,16 @@
     padding-left: 5px;
 }
 
+.minutesSmall {
+    max-width: 10%;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    /* background: #000;    */
+    /* border: 1px solid red; */
+    padding-left: 3px;
+}
+
 .shortDate {
     display: none;
 }
@@ -52,11 +62,19 @@
 }
 
 /* Teams */
+.teamsSmall,
 .teams {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 50%;
+    /* border: 1px solid; */
+}
+
+.teamsSmall {
+    width: 80%;
+    justify-content: space-around;
+    /* border: 1px solid red; */
 }
 
 .team {
@@ -68,12 +86,12 @@
 
 .teamHome {
     justify-content: flex-end;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .teamAway {
     justify-content: flex-start;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .teamName{
@@ -107,8 +125,12 @@
     border: 1px solid lightgray;
     position: absolute;
     display: flex;
-    background: #fd4d8b;
+    background: #724150;
     color: white;
+}
+
+.tabloSmall {
+    margin: 0 50px;
 }
 
 .homeGoals {
@@ -128,8 +150,15 @@
     align-items: center;
     justify-content: flex-start;
     font-size: 14px;
-    /* border: 1px solid red; */
+}
 
+.stadiumNameSmall {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+    display: none;
 }
 
 .stadiumIcon {
@@ -162,7 +191,7 @@
     }
     
     .teamAway {
-        margin-left: 15px;
+        margin-left: 40px;
     }
 
     .stadiumName {
@@ -191,6 +220,10 @@
     .teams {
         width: 85%;  
         font-size: 18px;
+    }
+
+    .teamsSmall {
+        font-size: 14px;
     }
 
     .team {
@@ -239,6 +272,15 @@
         font-size: 14px;
     }
 
+    .minutesSmall {
+        font-size: 12px;
+    }
+
+    .teamsSmall {
+        font-size: 13px;
+    }
+
+
     .team {
         width: 100%;
     }
@@ -285,6 +327,19 @@
         font-size: 12px;
         display: flex;
         align-items: center;
+    }
+
+    .minutesSmall {
+        font-size: 8px;
+    }
+
+    .teamsSmall {
+        font-size: 12px;
+        width: 90%;
+    }
+
+    .teamsSmall img {
+        width: 17px;
     }
 
     .team {

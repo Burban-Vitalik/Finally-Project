@@ -1,0 +1,17 @@
+.todayMatch {
+    display: block;
+    border: 1px solid lightgray;
+    margin: 25px 0;
+    cursor: pointer;
+}
+
+.todayMatch:hover {
+    background-image: linear-gradient(to right, #7a1896, #9a1aa4, #bb1bb0, #dd1bbb, #ff1cc4);
+    color: white;
+    transition: 0.1s;
+}
+
+.overview {
+    display: flex;
+    padding: 10px 0;
+}
