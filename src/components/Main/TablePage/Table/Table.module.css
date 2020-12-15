@@ -88,6 +88,22 @@ tbody tr:hover {
 }
 
 /********** Media **********/
+@media (min-width: 1200px) {
+    .thClubSmall,
+    .thPositionSmall,
+    .thPointsSmall,
+    .thPlayedSmall {
+        font-size: 12px !important;  
+        padding: 3px !important;
+    }
+
+    .thClubSmall img {
+        width: 18px;       
+    }
+
+}
+
+
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     .thForm {
         display: none !important;
@@ -95,6 +111,22 @@ tbody tr:hover {
 
     .header h1 {
         font-size: 48px;
+    }
+
+    .thPlayedSmall {
+        display: none !important;
+    }
+
+    .thPositionSmall,
+    .thClubSmall,
+    .thPointsSmall {
+        font-size: 12px !important;
+        padding: 2px !important;
+    }
+    
+    .thClubSmall img {
+        width: 17px;
+        margin-right: 0px;
     }
 }
 
@@ -108,6 +140,17 @@ tbody tr:hover {
 
     .thPosition {
         width: 2%;
+    }
+
+    .thPlayedSmall {
+        display: none !important;
+    }
+
+    .thPositionSmall,
+    .thClubSmall,
+    .thPointsSmall {
+        font-size: 12px !important;
+        padding: 2px 1px !important;
     }
 
     .header h1 {

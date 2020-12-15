@@ -27,11 +27,11 @@ export class TeamList extends React.Component{
             <div className={s.clubList}>
                 <div className={s.container}>
                     <p>League teams</p>
-                    {
+                    {/* {
                         this.state.teamList.map((elem,index) => {
                             return <img className={s.teamLogo} key={index} src={elem.team.logo} alt="Football Icon"/>
                         })
-                    }
+                    } */}
                 </div>
             </div>
         )

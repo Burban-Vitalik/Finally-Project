@@ -84,7 +84,23 @@ h2 {
     h2 {
         font-size: 24px;
         display: flex;
-        justify-content: start;
+        justify-content: center;
+        
+    }
+
+    .youtubeIcon,
+    .facebookIcon,
+    .instagramIcon,
+    .twitterIcon,
+    .spotifyIcon {
+        width: 15px !important;
+        margin-right: 3px;
+    }
+
+    .listSocials {
+        padding: 0;
+        display: flex;
+        font-size: 12px;        
     }
    }
 

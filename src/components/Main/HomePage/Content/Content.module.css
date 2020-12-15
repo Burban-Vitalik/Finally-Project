@@ -1,8 +1,7 @@
 .content {
     font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif;
-    max-width: 75%;
+    max-width: 70%;
     width: 100%;
-    /* background: lightblue; */
 }
 
 .h2 {
@@ -18,10 +17,11 @@
 
 .listNews div {
     display: flex;
+    justify-content: center;
 }
 
 .listNews article {
-    max-width: 28%;
+    max-width: 26%;
     width: 100%;
 }
 
@@ -36,6 +36,11 @@
 
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .content {
+        max-width: 70%;
+        width: 100%;
+    }
+
     .listNews article {
         max-width: 40%;
         width: 100%;
@@ -47,6 +52,7 @@
  }
 
  @media (min-width: 768px) and (max-width: 991.98px) {
+
     .listNews article {
         max-width: 40%;
         width: 100%;
@@ -67,18 +73,18 @@
     }
     
     .h2 {
-        justify-content: center;
+        justify-content: left;
+
     }
 
     .listNews article {
-        max-width: 80%;
+        max-width: 45%;
         width: 100%;
         font-size: 18px;
         margin: 15px auto;
     }
 
     .listNews article img {
-        max-height: 220px;
         object-fit: cover;
         background-position: top;
     }
@@ -95,7 +101,7 @@
     }
 
     .listNews article {
-        max-width: 80%;
+        max-width: 100%;
         width: 100%;
         margin: 30px auto;
 
@@ -106,11 +112,13 @@
     }
     
     .listNews article img {
-        max-height: 180px;
+        max-height: 400px;
+        height: auto;
         background-position: bottom;
         object-fit: cover;
     }
     }
+    
 
 
 

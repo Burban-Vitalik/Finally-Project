@@ -80,6 +80,11 @@ a.active {
 
     .navigation {
         display: flex;
+        justify-content: center;
+    }
+
+    .navigation a {
+        padding: 5px;
     }
 
     h1 {

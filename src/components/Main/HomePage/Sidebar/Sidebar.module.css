@@ -1,40 +1,13 @@
 .sidebar {
     /* background: coral; */
-    width: 25%;
+    width: 30%;
     text-align: center;
     padding-top: 50px;
 }
 
-
-
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (min-width: 320px) and (max-width: 767.98px) {
     .sidebar {
-        width: 100%;
+        display: none;
     }
-   }
-
-   @media (max-width: 575.98px) {
-    .content {
-        max-width: 100%;
-        width: 100%;
-    }
-
-
-    .listNews article {
-        max-width: 100%;
-        width: 100%;
-        margin: 15px;
-    }
-    .newsSection {
-        margin-top: 10px;
-    }
-    
-    .listNews article img {
-        max-height: 160px;
-        background-position: bottom;
-        object-fit: cover;
-    }
-    }
-
-
+}
 
