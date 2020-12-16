@@ -91,3 +91,10 @@
 .stadiumCapacity {
     font-size: 12px;
 }
+
+@media (min-width: 320px) and (max-width:992px) {
+    .clubList {
+        width: 100%;
+        padding: 0 15px;
+    }
+}

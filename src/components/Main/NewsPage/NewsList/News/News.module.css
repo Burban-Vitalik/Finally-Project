@@ -93,7 +93,7 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .news {
-        max-width: 100%;
+        max-width: 40%;
     }
 
     .img img {
