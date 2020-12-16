@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     color: white;
+    margin: 0 3px;
 }
 
 .win {
@@ -17,5 +18,5 @@
 }
 
 .lost {
-    background: red;
+    background: rgb(255, 39, 39);
 }

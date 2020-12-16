@@ -78,7 +78,7 @@ export default class DenseTable extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className={s.tableComponent}>
         {(this.state.showSpiner) ? (<Spiner />) : ("")}
         <TableContainer component={Paper} className={s.tableContainer}>
         <Table className={s.table} size="small" aria-label="a dense table">
@@ -105,15 +105,15 @@ export default class DenseTable extends React.Component {
                   <TableCell className={s.thGD}>GD</TableCell>
                 </Tooltip>
               )}
-              {(this.props.tableSmall) ? (<TableCell className={`${s.thPointsSmall}`}>Pts</TableCell>) : (<TableCell className={s.thPlayed}>Played</TableCell>)}
+              {(this.props.tableSmall) ? (<TableCell className={`${s.thPointsSmall}`}>Pts</TableCell>) : (<TableCell className={s.thPoints}>Points</TableCell>)}
               {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>Form</TableCell>)}
             </TableRow>
           </TableHead>
           <TableBody className={s.tableBody}>
             {this.state.rows.map((row, index) => (
-              <TableRow key={index} >
+              <TableRow key={index} className={s.tableRow}>
                 {(this.props.tableSmall) ? (<TableCell component="th" scope="row" className={`${s.thPositionSmall}`}> {row.position}</TableCell>) : (<TableCell component="th" scope="row" className={`${s.thPosition}`}> {row.position}</TableCell>)}
-                {(this.props.tableSmall) ? (<TableCell className={s.thClubSmall}> <img src={row.club.logo} alt={row.club.name}/> {row.club.name}</TableCell>) : (<TableCell className={s.thClub}> <img src={row.club.logo} alt={row.club.name}/> {row.club.name}</TableCell>)}
+                {(this.props.tableSmall) ? (<TableCell className={s.thClubSmall}><div><img src={row.club.logo} alt={row.club.name}/> {row.club.name}</div></TableCell>) : (<TableCell className={s.thClub}><div><img src={row.club.logo} alt={row.club.name}/> {row.club.name}</div></TableCell>)}
                 {(this.props.tableSmall) ? (<TableCell className={`${s.thPlayedSmall}`}> {row.played}</TableCell>) : (<TableCell className={s.thPlayed}> {row.played}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thWon}> {row.won}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thDrawn}> {row.drawn}</TableCell>)}
@@ -123,9 +123,11 @@ export default class DenseTable extends React.Component {
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGD}> {row.gd}</TableCell>)}
                 {(this.props.tableSmall) ? (<TableCell className={`${s.thPointsSmall}`}> {row.points}</TableCell>) : (<TableCell className={s.thPoints}> {row.points}</TableCell>)}
                 {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>
-                {this.getSplitTeamForm(row.form).map((item,index)=> {
-                  return <TeamForm key={index} teamForm={item}/>
-                })}
+                  <div>
+                    {this.getSplitTeamForm(row.form).map((item,index)=> {
+                    return <TeamForm key={index} teamForm={item}/>
+                    })}
+                  </div>
                 </TableCell>)}
               </TableRow>
             ))}

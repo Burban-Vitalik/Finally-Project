@@ -3,6 +3,7 @@
     margin: 0 auto;
     text-align: center;
     box-shadow: 1px 1px 15px 1px gray !important;
+    cursor: pointer;
 }
 
 .table {
@@ -17,8 +18,14 @@
     background: rgb(250, 129, 240);
 }
 
-tbody th tr {
-    padding: 30px;
+.thForm div{
+    display: flex ;
+    justify-content: center !important;
+    align-items: center !important; 
+}
+
+.thForm {
+    width: 6%;
 }
 
 .thPosition,
@@ -29,21 +36,23 @@ tbody th tr {
 .thGF,
 .thGA,
 .thGD,
-.thPoints,
-.thForm {
+.thPoints {
     width: 8%;
     text-align: center !important;
+    align-items: stretch !important;
+    /* border: 1px solid red;  */
+    padding: 0px !important;
+       
 }
 
-.thForm {
+.thClub div{
     display: flex !important;
+    align-items: center !important;
+    font-size: 14px;
 }
 
 .thClub {
-    display: flex !important;
-    align-items: center;
-    box-sizing: border-box !important;
-    font-size: 14px;
+    width: 30%;
 }
 
 .thClub img {
@@ -76,23 +85,13 @@ tbody th tr {
     align-items: center !important;
 }
 
-.lch {
-    background: #000;
-}
-
 .thClubSmall img {
     width: 20px;
     margin-right: 3px;
 }
 
-
 tbody tr:hover {
     box-shadow: 2px 2px 12px 2px rgb(223, 221, 221);
-}
-
-
-.lch {
-    background: coral;
 }
 
 /********** Media **********/
@@ -204,8 +203,19 @@ tbody tr:hover {
     }
 
     .thPoints {
-        width: 20%;
+        width: 10%;
     }
 
+
+    .thPosition {
+        width: 2%;
+    }
   }
+
+  @media (min-width: 320px) and (max-width:992px) {
+    .tableContainer {
+        width: 90% !important;
+    }
+
+    }   
 

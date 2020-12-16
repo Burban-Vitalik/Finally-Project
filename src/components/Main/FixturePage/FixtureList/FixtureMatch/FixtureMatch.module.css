@@ -28,7 +28,7 @@
 }
 
 .minutesSmall {
-    max-width: 10%;
+    max-width: 15%;
     width: 100%;
     font-size: 14px;
     text-align: center;
@@ -182,6 +182,12 @@
         display: none;
     }
     
+    .minutesSmall {
+        
+        max-width: 15%;
+        width: 100%;
+    }
+
     .shortestDate {
         display: none;
     }
@@ -211,6 +217,12 @@
     
     .shortestDate {
         display: none;
+    }
+    
+    .minutesSmall .pLive{
+        /* max-width: 15%; */
+        /* width: 100%; */
+        margin: 0px 0px ;
     }
 
     .pLive {
@@ -274,6 +286,8 @@
 
     .minutesSmall {
         font-size: 12px;
+        max-width: 15%;
+        width: 100%;
     }
 
     .teamsSmall {
@@ -320,6 +334,10 @@
 
     .pLive {
         font-size: 12px;
+    }
+
+    .minutesSmall .pLive {
+        font-size: 10px;
     }
 
     .teams {
