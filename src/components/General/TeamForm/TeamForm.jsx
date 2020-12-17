@@ -39,7 +39,7 @@ export class TeamForm extends React.Component {
         return(
             <div>
                 {(this.state.selectedForm) ? (
-                    <div class={`${s.teamForm} ${s[this.state.selectedForm.className]}`}>
+                    <div className={`${s.teamForm} ${s[this.state.selectedForm.className]}`}>
                         {this.state.selectedForm.form}
                     </div>
                 ) : ('')}

@@ -29,7 +29,7 @@ export class TeamList extends React.Component{
                     <p>League teams</p>
                     {
                         this.state.teamList.map((elem,index) => {
-                            return <img className={s.teamLogo} key={index} src={elem.team.logo} alt="Football Icon"/>
+                            return <a key={index} href="https://www.premierleague.com/clubs" target="_blank"><img className={s.teamLogo} src={elem.team.logo} alt="Football Icon"/></a>
                         })
                     }
                 </div>

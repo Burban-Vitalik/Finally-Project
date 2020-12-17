@@ -16,7 +16,7 @@
 .h2 {
     color: #000;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     margin-left: 20px;
 }
 

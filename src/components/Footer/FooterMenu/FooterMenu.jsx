@@ -7,7 +7,7 @@ export class FooterMenu extends React.Component {
     render(){
         return(
             <div className={s.footerMenu}>
-                <h1>Premie League</h1>
+                <h1>Premier League</h1>
                 <nav className={s.navigation}>
                     <NavLink to='/home' activeClassName={s.active}>Home</NavLink>
                     <NavLink to='/table' activeClassName={s.active}>Table</NavLink>

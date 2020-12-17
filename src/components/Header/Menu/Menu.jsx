@@ -45,7 +45,7 @@ export class Menu extends React.Component {
                 <div className={s.menu}>
                     <NavLink to="/" className={s.parentLogo}>
                         <img src='https://cdn.freelogovectors.net/wp-content/uploads/2020/08/epl-premierleague-logo.png' alt='Logo' className={s.logo}/>
-                        <p>Premier Legue</p>                    
+                        <p>Premier League</p>                    
                     </NavLink>
 
                     {this.getNavigation()}

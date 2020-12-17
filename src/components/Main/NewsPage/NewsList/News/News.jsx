@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 export class News extends React.Component {
     constructor(props){
         super(props);
-        console.log('Props', this.props);
     }
 
     getTime = (publishedTime) => {
