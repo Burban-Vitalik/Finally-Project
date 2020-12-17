@@ -10,7 +10,7 @@
                 List of Clubs
  ******************************************/
 const headers = {
-    "x-rapidapi-key": 'c0a8f9ebd4msh8d6eafbe24f0fcdp1df1e4jsn046eebcd6a03',
+    "x-rapidapi-key": '8a20c36012msh5404bbe3b367d4dp1acd59jsnc5feb1741c3b',
     "x-rapidapi-host": "api-football-beta.p.rapidapi.com"
 }
 

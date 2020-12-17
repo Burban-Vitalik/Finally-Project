@@ -6,10 +6,6 @@
     cursor: pointer;
 }
 
-.table {
-    border-collapse: inherit !important;
-}
-
 .tableHead {
     background: rgb(238, 234, 234);
 }
@@ -20,8 +16,8 @@
 
 .thForm div{
     display: flex ;
-    justify-content: center !important;
-    align-items: center !important; 
+    justify-content: center ;
+    align-items: center; 
 }
 
 .thForm {
@@ -40,14 +36,12 @@
     width: 8%;
     text-align: center !important;
     align-items: stretch !important;
-    /* border: 1px solid red;  */
-    padding: 0px !important;
-       
+    padding: 0px !important;       
 }
 
 .thClub div{
-    display: flex !important;
-    align-items: center !important;
+    display: flex;
+    align-items: center;
     font-size: 14px;
 }
 
@@ -60,19 +54,16 @@
     display: flex;
     align-items: stretch;
     margin-right: 8px;
-    padding: 0;
 }
 
 .thPoints {
-    font-weight: 500 !important;
+    font-weight: 500 ;
 }
 
-
-/* For Small Table */
+/*Table Small*/
 .thPositionSmall,
 .thPointsSmall,
 .thPlayedSmall {
-    /* border: 1px solid red;   */
     padding: 5px !important;
     text-align: center !important;
     font-size: 12px;
@@ -107,9 +98,7 @@ tbody tr:hover {
     .thClubSmall img {
         width: 18px;       
     }
-
 }
-
 
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     .thForm {
@@ -216,6 +205,5 @@ tbody tr:hover {
     .tableContainer {
         width: 90% !important;
     }
-
-    }   
+}   
 

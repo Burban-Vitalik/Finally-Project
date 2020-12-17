@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 70px;
+    margin-top: 20px;
 }
 
 .boxCard {
@@ -20,6 +20,12 @@
     border-radius: 10px;
     background:  #6caee0;
     cursor: pointer;
+}
+
+.boxCard:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+    box-shadow: 5px 5px 5px gray;
 }
 
 .stadium {
@@ -44,7 +50,6 @@
     top: 12rem;
     left: 50%;
     margin-left: -40px;
-
     border-radius: 100%;
     background: #fff;
 }
@@ -84,7 +89,6 @@
 .stadiumName {
     font-size: 20px;
     font-weight: 500;
-    /* line-height: 1.4; */
     margin-top: 15px;
 }
 

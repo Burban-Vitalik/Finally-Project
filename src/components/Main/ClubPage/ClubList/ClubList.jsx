@@ -4,7 +4,6 @@ import s from '../ClubList/ClubList.module.css';
 import {getTeams} from '../../../../api';
 import Spiner from '../../../General/Spiner/Spiner';
 
-
 export class ClubList extends React.Component {
      constructor(props){
         super(props);
@@ -21,7 +20,6 @@ export class ClubList extends React.Component {
                         teamList: res.response,
                         showSpiner: false,
                     })
-                    
                 }
             )
             .catch(
@@ -31,14 +29,13 @@ export class ClubList extends React.Component {
                } 
             );   
     }
+
     render(){
-        console.log('constructor state list',this.state.teamList);    
         return(
             <a href="https://www.premierleague.com/clubs" target="_blanc">
                 <div className={s.clubList}>
                 {(this.state.showSpiner) ? (<Spiner />) : ("")}
-                {
-                    this.state.teamList.map((elem,index) => {
+                    {this.state.teamList.map((elem,index) => {
                         return(
                             <div className={s.boxCard} key={index}>
                                 <div className={s.stadium}>

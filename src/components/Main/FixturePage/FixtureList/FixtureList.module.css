@@ -1,0 +1,16 @@
+.notFound {
+    color: black;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.notFound svg {
+    font-size: 30px ;
+}
+
+@media (max-width: 767.98px) {
+    .notFound {
+        justify-content: center;
+    }
+}

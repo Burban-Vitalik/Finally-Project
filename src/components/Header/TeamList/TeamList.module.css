@@ -33,17 +33,15 @@
     transform: scale(1.3, 1.3);
 }
 
-
 /* Media */
 @media (min-width: 1200px) { 
     .clubList {
         display: block;
     }
- }
+}
 
-
- @media (max-width: 1199.98px) {
+@media (max-width: 1199.98px) {
      .clubList {
          display: none;
      }
-  }
+}

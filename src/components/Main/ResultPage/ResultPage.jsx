@@ -21,7 +21,7 @@ export class ResultPage extends React.Component{
                     <h1>Results</h1>
                 </div>
                 <div className={s.container}>
-                    <FixtureList fromDate={this.state.fromDate} toDate={this.state.toDate} fixture={false}/>
+                    <FixtureList fromDate={this.state.fromDate} toDate={this.state.toDate} fixture={false} resultMatch={true}/>
                 </div>
             </div>
         )

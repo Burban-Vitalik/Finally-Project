@@ -13,7 +13,8 @@ export class FixturePage extends React.Component{
             fromDate: `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}`,
             toDate: `${new Date().getFullYear()}-${new Date().getMonth()+2}-${new Date().getDate()}`,
         }
-    }          
+    }      
+        
     render(){
         return(
             <div className={s.fixturePage}>

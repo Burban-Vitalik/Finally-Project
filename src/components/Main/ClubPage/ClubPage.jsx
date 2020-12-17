@@ -4,7 +4,6 @@ import s from '../ClubPage/ClubPage.module.css';
 import { ClubList } from './ClubList/ClubList';
 
 export class ClubPage extends React.Component {
-
     render(){
         return(
             <div className={s.clubPage}>

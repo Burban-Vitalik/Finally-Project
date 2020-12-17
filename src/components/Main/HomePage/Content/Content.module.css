@@ -2,7 +2,11 @@
     font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif;
     max-width: 70%;
     width: 100%;
-    margin-top: 50px;
+    padding: 50px 0;
+}
+
+.matchToday {
+    margin-bottom: 50px;
 }
 
 .matchToday img {
@@ -16,12 +20,6 @@
     margin-left: 20px;
 }
 
-.newsSection .listNews {
-    display: flex;
-    justify-content: center;
-}
-
-
 .listNews  {
     display: flex;
     justify-content: space-between;
@@ -30,13 +28,11 @@
 .listNews article {
     max-width: 27%;
     width: 100%;
-
 }
 
 .listNews article img {
     max-height: 180px;
 }
-
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .content {
@@ -55,29 +51,26 @@
  }
 
  @media (min-width: 768px) and (max-width: 991.98px) {
-
     .listNews article {
         max-width: 40%;
         width: 100%;
     }
-    
+
     .listNews article img {
         max-height: 160px;
         object-fit: cover;
         background-position: bottom;
+}
+}
 
-    }
-  }
-
-  @media (min-width: 576px) and (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
     .content {
         max-width: 100%;
         width: 100%;
     }
     
     .h2 {
-        justify-content: left;
-
+        justify-content: center;
     }
 
     .listNews article {
@@ -91,9 +84,9 @@
         object-fit: cover;
         background-position: top;
     }
-   }
+}
 
-   @media (max-width: 575.98px) {
+@media (max-width: 575.98px) {
     .content {
         max-width: 100%;
         width: 100%;
@@ -101,13 +94,13 @@
 
     .h2 {
         justify-content: center;
+        font-size: 30px;
     }
 
     .listNews article {
         max-width: 100%;
         width: 100%;
         margin: 30px auto;
-
     }
 
     .newsSection {
@@ -120,7 +113,7 @@
         background-position: bottom;
         object-fit: cover;
     }
-    }
+}
     
 
 

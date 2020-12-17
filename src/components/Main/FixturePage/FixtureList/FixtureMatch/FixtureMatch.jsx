@@ -4,7 +4,6 @@ import s from '../FixtureMatch/FixtureMatch.module.css';
 import {getFutureFixtures} from '../../../../../api';
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 
-
 export class FixtureMatch extends React.Component{
      getTimestamp = (timestamp) => {
         let matchTimestamp = timestamp
@@ -37,6 +36,7 @@ export class FixtureMatch extends React.Component{
         let day = newDate.getDate();
         return day + ":" + month + ":" + year;
     }
+
     render(){
         return(
             <div className={s.fixtureMatch}>
@@ -91,9 +91,7 @@ export class FixtureMatch extends React.Component{
                     </div>
                     {/* Stadium */}
                     <div className={(this.props.fixtureSmall) ? (s.stadiumNameSmall) : (s.stadiumName)}>
-                        <div className={s.stadiumIcon}>
-                            
-                        </div>
+                        <div className={s.stadiumIcon}></div>
                         <p>{this.props.match.fixture.venue.name},{this.props.match.fixture.venue.city}</p>
                     </div>
                 </div>

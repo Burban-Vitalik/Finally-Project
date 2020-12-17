@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Table Material-ui
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -7,7 +9,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Tooltip from '@material-ui/core/Tooltip';
-
 
 import s from '../Table/Table.module.css';
 import {getTable} from '../../../../api';
@@ -48,7 +49,6 @@ export default class DenseTable extends React.Component {
                     gd: elem.all.goals.for - elem.all.goals.against,
                     points: elem.points,
                     form: elem.form,
-
                   }
                 ],
                 showSpiner: false,
@@ -63,16 +63,13 @@ export default class DenseTable extends React.Component {
         this.setState({showSpiner: false});
    }   
     );
-    // this.getSplitTeamForm('LLWDL');
   }
 
   getSplitTeamForm =  (teamForm) => {
     if(typeof teamForm !== 'string'){
       return [];
     }
-    console.log('Team Form',teamForm);
     let splited = teamForm.split('');
-    console.log('Splited',splited);
     return (splited && splited.length) ? splited : [];
   } 
 
@@ -81,58 +78,58 @@ export default class DenseTable extends React.Component {
       <div className={s.tableComponent}>
         {(this.state.showSpiner) ? (<Spiner />) : ("")}
         <TableContainer component={Paper} className={s.tableContainer}>
-        <Table className={s.table} size="small" aria-label="a dense table">
-          <TableHead className={(this.props.tableSmall) ? (s.tableHeadSmall) : (s.tableHead)}>
-            <TableRow className={s.tableRow}>
-            {(this.props.tableSmall) ? (<TableCell className={`${s.thPositionSmall}`}>Pos</TableCell>) : (<TableCell className={s.thPosition}>Position</TableCell>)}
-              {(this.props.tableSmall) ? (<TableCell className={s.thClubSmall}>Club</TableCell>) : (<TableCell className={s.thClub}>Club</TableCell>)}
-              {(this.props.tableSmall) ? (<TableCell className={s.thPlayedSmall}>Pl</TableCell>) : (<TableCell className={s.thPlayed}>Played</TableCell>)}
-              {(this.props.tableSmall) ? ("") : (<TableCell className={s.thWon}>Won</TableCell>)}
-              {(this.props.tableSmall) ? ("") : (<TableCell className={s.thDrawn}>Drawn</TableCell>)}
-              {(this.props.tableSmall) ? ("") : (<TableCell className={s.thLost}>Lost</TableCell>)}
-              {(this.props.tableSmall) ? ("") : (
-                <Tooltip title="Goals for" placement="top-start">
-                  <TableCell className={s.thGF}>GF</TableCell>
-                </Tooltip>
-              )}
-              {(this.props.tableSmall) ? ("") : (
-                <Tooltip title="Goals against" placement="top-start">
-                  <TableCell className={s.thGA}>GA</TableCell>
-                </Tooltip>
-              )}
-              {(this.props.tableSmall) ? ("") : (
-                <Tooltip title="Goals difference" placement="top-start">
-                  <TableCell className={s.thGD}>GD</TableCell>
-                </Tooltip>
-              )}
-              {(this.props.tableSmall) ? (<TableCell className={`${s.thPointsSmall}`}>Pts</TableCell>) : (<TableCell className={s.thPoints}>Points</TableCell>)}
-              {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>Form</TableCell>)}
-            </TableRow>
-          </TableHead>
-          <TableBody className={s.tableBody}>
-            {this.state.rows.map((row, index) => (
-              <TableRow key={index} className={s.tableRow}>
-                {(this.props.tableSmall) ? (<TableCell component="th" scope="row" className={`${s.thPositionSmall}`}> {row.position}</TableCell>) : (<TableCell component="th" scope="row" className={`${s.thPosition}`}> {row.position}</TableCell>)}
-                {(this.props.tableSmall) ? (<TableCell className={s.thClubSmall}><div><img src={row.club.logo} alt={row.club.name}/> {row.club.name}</div></TableCell>) : (<TableCell className={s.thClub}><div><img src={row.club.logo} alt={row.club.name}/> {row.club.name}</div></TableCell>)}
-                {(this.props.tableSmall) ? (<TableCell className={`${s.thPlayedSmall}`}> {row.played}</TableCell>) : (<TableCell className={s.thPlayed}> {row.played}</TableCell>)}
-                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thWon}> {row.won}</TableCell>)}
-                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thDrawn}> {row.drawn}</TableCell>)}
-                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thLost}> {row.lost}</TableCell>)}
-                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGF}> {row.gf}</TableCell>)}
-                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGA}> {row.ga}</TableCell>)}
-                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGD}> {row.gd}</TableCell>)}
-                {(this.props.tableSmall) ? (<TableCell className={`${s.thPointsSmall}`}> {row.points}</TableCell>) : (<TableCell className={s.thPoints}> {row.points}</TableCell>)}
-                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>
+          <Table className={s.table} size="small" aria-label="a dense table">
+            <TableHead className={(this.props.tableSmall) ? (s.tableHeadSmall) : (s.tableHead)}>
+              <TableRow className={s.tableRow}>
+                {(this.props.tableSmall) ? (<TableCell className={`${s.thPositionSmall}`}>Pos</TableCell>) : (<TableCell className={s.thPosition}>Position</TableCell>)}
+                {(this.props.tableSmall) ? (<TableCell className={s.thClubSmall}>Club</TableCell>) : (<TableCell className={s.thClub}>Club</TableCell>)}
+                {(this.props.tableSmall) ? (<TableCell className={s.thPlayedSmall}>Pl</TableCell>) : (<TableCell className={s.thPlayed}>Played</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thWon}>Won</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thDrawn}>Drawn</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thLost}>Lost</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (
+                  <Tooltip title="Goals for" placement="top-start">
+                    <TableCell className={s.thGF}>GF</TableCell>
+                  </Tooltip>
+                )}
+                {(this.props.tableSmall) ? ("") : (
+                  <Tooltip title="Goals against" placement="top-start">
+                    <TableCell className={s.thGA}>GA</TableCell>
+                  </Tooltip>
+                )}
+                {(this.props.tableSmall) ? ("") : (
+                  <Tooltip title="Goals difference" placement="top-start">
+                    <TableCell className={s.thGD}>GD</TableCell>
+                  </Tooltip>
+                )}
+                {(this.props.tableSmall) ? (<TableCell className={`${s.thPointsSmall}`}>Pts</TableCell>) : (<TableCell className={s.thPoints}>Points</TableCell>)}
+                {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>Form</TableCell>)}
+              </TableRow>
+            </TableHead>
+            <TableBody className={s.tableBody}>
+              {this.state.rows.map((row, index) => (
+                <TableRow key={index} className={s.tableRow}>
+                  {(this.props.tableSmall) ? (<TableCell component="th" scope="row" className={`${s.thPositionSmall}`}> {row.position}</TableCell>) : (<TableCell component="th" scope="row" className={`${s.thPosition}`}> {row.position}</TableCell>)}
+                  {(this.props.tableSmall) ? (<TableCell className={s.thClubSmall}><div><img src={row.club.logo} alt={row.club.name}/> {row.club.name}</div></TableCell>) : (<TableCell className={s.thClub}><div><img src={row.club.logo} alt={row.club.name}/> {row.club.name}</div></TableCell>)}
+                  {(this.props.tableSmall) ? (<TableCell className={`${s.thPlayedSmall}`}> {row.played}</TableCell>) : (<TableCell className={s.thPlayed}> {row.played}</TableCell>)}
+                  {(this.props.tableSmall) ? ("") : (<TableCell className={s.thWon}> {row.won}</TableCell>)}
+                  {(this.props.tableSmall) ? ("") : (<TableCell className={s.thDrawn}> {row.drawn}</TableCell>)}
+                  {(this.props.tableSmall) ? ("") : (<TableCell className={s.thLost}> {row.lost}</TableCell>)}
+                  {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGF}> {row.gf}</TableCell>)}
+                  {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGA}> {row.ga}</TableCell>)}
+                  {(this.props.tableSmall) ? ("") : (<TableCell className={s.thGD}> {row.gd}</TableCell>)}
+                  {(this.props.tableSmall) ? (<TableCell className={`${s.thPointsSmall}`}> {row.points}</TableCell>) : (<TableCell className={s.thPoints}> {row.points}</TableCell>)}
+                  {(this.props.tableSmall) ? ("") : (<TableCell className={s.thForm}>
                   <div>
                     {this.getSplitTeamForm(row.form).map((item,index)=> {
-                    return <TeamForm key={index} teamForm={item}/>
+                      return <TeamForm key={index} teamForm={item}/>
                     })}
                   </div>
-                </TableCell>)}
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+                  </TableCell>)}
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
       </TableContainer>
       </div>
     );

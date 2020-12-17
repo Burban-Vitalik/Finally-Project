@@ -9,16 +9,11 @@ import { HomePage } from './components/Main/HomePage/HomePage';
 import { TablePage } from './components/Main/TablePage/TablePage';
 import { ResultPage } from './components/Main/ResultPage/ResultPage';
 
-import s from './index.css';
+import s from './index.module.css';
 import { NewsPage } from './components/Main/NewsPage/NewsPage';
 import { Footer } from './components/Footer/Footer';
 
 class App extends React.Component{
-  constructor(){
-    super();
-    
-  }
-
   render(){
     return(
         <div className={s.app}>
