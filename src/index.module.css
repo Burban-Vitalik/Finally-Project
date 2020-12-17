@@ -22,11 +22,6 @@ code {
     monospace;
 }
 
-body > *:first-of-type {
-  flex: 1;
-  display: contents;
-}
-
 .app {
   display: flex;
   flex: 1;
